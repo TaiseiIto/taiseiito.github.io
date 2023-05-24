@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+ <head>
+  <title>だいみょーじん's page</title>
+  <meta charset="utf-8">
+  <meta name="description" content="第10節">
+ </head>
+ <body>
+  <table border="1">
+   <tr>
+    <th>header 1</th>
+    <th>header 2</th>
+    <th>header 3</th>
+   </tr>
+   <tr>
+    <td>(row=0,column=0)</td>
+    <td>(row=0,column=1)</td>
+    <td rowspan="2">(row={0,1},column=2)</td>
+   </tr>
+   <tr>
+    <td colspan="2">(row=1,column={0,1})</td>
+   </tr>
+   <tr>
+    <td>(row=2,column=0)</td>
+    <td colspan="2">(row=2,column={1,2})</td>
+   </tr>
+  </table>
+  <p>
+   <ul>
+    <li>tableタグは，表を作成します．border属性は，枠線のデザインを決めます．</li>
+    <li>trタグは，table rowの略で，ヘッダ行または表本体を構成する行を表します．</li>
+    <li>thタグは，table headerの略で，ヘッダ行の中の各項目を表します．</li>
+    <li>tdタグは，table dataの略で，標本代を構成する行の中の各項目を表します．</li>
+    <li>tdタグのcolspan属性は，横方向に結合するセル数を表します．</li>
+    <li>tdタグのrowspan属性は，縦方向に結合するセル数を表します．</li>
+   </ul>
+  </p>
+ </body>
+</html>
+
