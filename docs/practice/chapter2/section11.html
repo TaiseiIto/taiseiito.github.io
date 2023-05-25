@@ -27,17 +27,36 @@
    <!-- テキスト入力欄は，placeholder属性で初期値を指定します -->
    <p>
     好きな三角関数
-    <input type="radio" name="trigonometric" value="sin" checked>sin
-    <input type="radio" name="trigonometric" value="cos">cos
-    <input type="radio" name="trigonometric" value="tan">tan
+    <input type="radio" name="trigonometric" value="sin" id="sin" checked>
+    <label for="sin">
+     sin
+    </label>
+    <input type="radio" name="trigonometric" value="cos" id="cos">
+    <label for="cos">
+     cos
+    </label>
+    <input type="radio" name="trigonometric" value="tan" id="tan">
+    <label for="tan">
+     tan
+    </label>
     <!-- ラジオボタンは，nameが同じボタンの中から，valueを選択させます -->
     <!-- checked属性の付いたボタンが初期値となります -->
+    <!-- inputタグのid属性とlabelタグのfor属性で関連付けられた箇所は，label部分をクリックするとinput部分をクリックしたのと同じ振舞をします -->
    </p>
    <p>
     好きな逆三角関数
-    <input type="checkbox" name="inverse-trigonometric" value="asin" checked>asin
-    <input type="checkbox" name="inverse-trigonometric" value="acos" checked>acos
-    <input type="checkbox" name="inverse-trigonometric" value="atan">atan
+    <input type="checkbox" name="inverse-trigonometric" value="asin" id="asin" checked>
+    <label for="asin">
+     asin
+    </label>
+    <input type="checkbox" name="inverse-trigonometric" value="acos" id="acos" checked>
+    <label for="acos">
+     acos
+    </label>
+    <input type="checkbox" name="inverse-trigonometric" value="atan" id="atan">
+    <label for="atan">
+     atan
+    </label>
    </p>
    <p>
     <input type="submit" value="送信ボタン">
