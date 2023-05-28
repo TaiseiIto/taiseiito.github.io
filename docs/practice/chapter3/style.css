@@ -7,6 +7,11 @@ html {
 body {
 	font-size: 0.5rem; /* 0.5 times of the html tag */
 }
+main {
+	background-image: url(../chapter2/myhead.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
 div p {
 	color: #ff0000;
 	background-color: #000000;
