@@ -1,11 +1,15 @@
 ﻿@charset "UTF-8";
+html {
+	background-color: #c0c0c0;
+	font-size: 30px; /* 30 pixels */
+}
 body {
-	background-color: #ff0000;
+	font-size: 0.5rem; /* 0.5 times of the html tag */
 }
-h1 {
-	color: #0000ff;
+div p {
+	color: #ff0000;
 }
-p {
-	font-size: 100px;
+h1, h2 {
+	font-size: 200%; /* 2 times of a parent tag */
 }
 
