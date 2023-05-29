@@ -1,0 +1,16 @@
+﻿@charset "UTF-8";
+body {
+	background-color: #000000;
+}
+header, main, footer {
+	margin: 10px;
+	padding: 10px;
+	background-color: #ffffff;
+}
+.blue {
+	color: #0000ff;
+}
+#orange {
+	color: #ff7000;
+}
+
