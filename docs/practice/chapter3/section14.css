@@ -14,4 +14,16 @@
 	margin: 10px;
 	padding: 10px;
 }
+.grid-container {
+	display: grid;
+	grid-template-columns: 200px 200px 200px 200px;
+	grid-template-rows: 200px 200px 200px 200px;
+	gap: 10px;
+}
+.grid-item {
+	background: #ff8000;
+	color: #ffffff;
+	padding: 10px;
+	text-align: center;
+}
 
