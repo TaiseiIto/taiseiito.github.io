@@ -1,0 +1,17 @@
+﻿@charset "UTF-8";
+.container {
+	height: 80vh;
+	display: flex;
+	flex-direction: row-reverse;
+	flex-wrap: wrap-reverse;
+	justify-content: space-around;
+	align-items: center;
+	align-content: space-around;
+}
+.item {
+	background: #00a0ff;
+	color: #ffffff;
+	margin: 10px;
+	padding: 10px;
+}
+
