@@ -6,89 +6,100 @@
   </title>
   <meta charset="utf-8">
   <meta charset="description" content="第11節">
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
  </head>
  <body>
-  <form method="post" name="test-form">
-   <p>
-    テキスト入力欄<input type="text" placeholder="default text">
-   </p>
-   <p>
-    検索キーワード入力欄<input type="search" placeholder="default key word">
-   </p>
-   <p>
-    メールアドレス入力欄<input type="email" placeholder="default@example.com">
-   </p>
-   <p>
-    電話番号入力欄<input type="tel" placeholder="0123456789">
-   </p>
-   <p>
-    URL入力欄<input type="url" placeholder="https://taiseiito.github.io">
-   </p>
-   <!-- テキスト入力欄は，placeholder属性で初期値を指定します -->
-   <p>
-    好きな三角関数
-    <input type="radio" name="trigonometric" value="sin" id="sin" checked>
-    <label for="sin">
-     sin
-    </label>
-    <input type="radio" name="trigonometric" value="cos" id="cos">
-    <label for="cos">
-     cos
-    </label>
-    <input type="radio" name="trigonometric" value="tan" id="tan">
-    <label for="tan">
-     tan
-    </label>
-    <!-- ラジオボタンは，nameが同じボタンの中から，valueを選択させます -->
-    <!-- checked属性の付いたボタンが初期値となります -->
-    <!-- inputタグのid属性とlabelタグのfor属性で関連付けられた箇所は，label部分をクリックするとinput部分をクリックしたのと同じ振舞をします -->
-   </p>
-   <p>
-    好きな逆三角関数
-    <input type="checkbox" name="inverse-trigonometric" value="asin" id="asin" checked>
-    <label for="asin">
-     asin
-    </label>
-    <input type="checkbox" name="inverse-trigonometric" value="acos" id="acos" checked>
-    <label for="acos">
-     acos
-    </label>
-    <input type="checkbox" name="inverse-trigonometric" value="atan" id="atan">
-    <label for="atan">
-     atan
-    </label>
-   </p>
-   <p>
-    <input type="submit" value="送信ボタン">
-   </a>
-   <p>
-    <input type="image" src="myhead.jpg" alt="送信ボタン">
-    <!-- 画像を送信ボタンにすることもできます -->
-   </a>
-   <p>
-    <select name="bloodtype">
-     <option value="A">
-      A
-     </option>
-     <option value="AB">
-      B
-     </option>
-     <option value="O">
-      O
-     </option>
-     <option value="AB">
-      AB
-     </option>
-     <option value="unknown">
-      不明
-     </option>
-    </select>
-   </p>
-   <p>
-    <textarea name="message" placeholder="ここにテキストを入力してください">
-    </textarea>
-   </p>
-  </form>
+  <header>
+   <h1>
+    第11節
+   </h1>
+  </header>
+  <main>
+   <form method="post" name="test-form">
+    <p>
+     テキスト入力欄<input type="text" placeholder="default text">
+    </p>
+    <p>
+     検索キーワード入力欄<input type="search" placeholder="default key word">
+    </p>
+    <p>
+     メールアドレス入力欄<input type="email" placeholder="default@example.com">
+    </p>
+    <p>
+     電話番号入力欄<input type="tel" placeholder="0123456789">
+    </p>
+    <p>
+     URL入力欄<input type="url" placeholder="https://taiseiito.github.io">
+    </p>
+    <!-- テキスト入力欄は，placeholder属性で初期値を指定します -->
+    <p>
+     好きな三角関数
+     <input type="radio" name="trigonometric" value="sin" id="sin" checked>
+     <label for="sin">
+      sin
+     </label>
+     <input type="radio" name="trigonometric" value="cos" id="cos">
+     <label for="cos">
+      cos
+     </label>
+     <input type="radio" name="trigonometric" value="tan" id="tan">
+     <label for="tan">
+      tan
+     </label>
+     <!-- ラジオボタンは，nameが同じボタンの中から，valueを選択させます -->
+     <!-- checked属性の付いたボタンが初期値となります -->
+     <!-- inputタグのid属性とlabelタグのfor属性で関連付けられた箇所は，label部分をクリックするとinput部分をクリックしたのと同じ振舞をします -->
+    </p>
+    <p>
+     好きな逆三角関数
+     <input type="checkbox" name="inverse-trigonometric" value="asin" id="asin" checked>
+     <label for="asin">
+      asin
+     </label>
+     <input type="checkbox" name="inverse-trigonometric" value="acos" id="acos" checked>
+     <label for="acos">
+      acos
+     </label>
+     <input type="checkbox" name="inverse-trigonometric" value="atan" id="atan">
+     <label for="atan">
+      atan
+     </label>
+    </p>
+    <p>
+     <input type="submit" value="送信ボタン">
+    </a>
+    <p>
+     <input type="image" src="myhead.jpg" alt="送信ボタン">
+     <!-- 画像を送信ボタンにすることもできます -->
+    </a>
+    <p>
+     <select name="bloodtype">
+      <option value="A">
+       A
+      </option>
+      <option value="AB">
+       B
+      </option>
+      <option value="O">
+       O
+      </option>
+      <option value="AB">
+       AB
+      </option>
+      <option value="unknown">
+       不明
+      </option>
+     </select>
+    </p>
+    <p>
+     <textarea name="message" placeholder="ここにテキストを入力してください">
+     </textarea>
+    </p>
+   </form>
+  </main>
+  <footer>
+   フッター
+  </footer>
  </body>
 </html>
 
