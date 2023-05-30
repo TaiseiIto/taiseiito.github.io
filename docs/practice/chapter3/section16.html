@@ -185,17 +185,18 @@
       <td>
        font
       </td>
+      <td>
        フォントに関するプロパティをまとめて指定
-      <td>
       </td>
-       font-style，font-variant，font-weight，font-size，line-height，font-familyの値を指定
       <td>
+       font-style，font-variant，font-weight，font-size，line-height，font-familyの値を指定
       </td>
      </tr>
     </table>
    </section>
    <section>
     <h2>
+     背景の修飾
     </h2>
     <table>
      <tr>
@@ -211,10 +212,102 @@
      </tr>
      <tr>
       <td>
+       background-color
       </td>
       <td>
+       背景色を指定
       </td>
       <td>
+       <p>
+        カラーコード...ハッシュ#で始まる3桁若しくは6桁のカラーコードを指定
+       </p>
+       <p>
+        色の名前...red，blue等の決められた色の名前を指定
+       </p>
+       <p>
+        RGB値...「rgb」から書き始め，赤，緑，青の値を「,（カンマ）」で区切って指定．透明度も含める場合は，「rgba＾」から書き始め，赤，緑，青，透明度の値を「,（カンマ）」で区切って指定．透明度は0~1の間で記述する
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       backgound-image
+      </td>
+      <td>
+       背景画像を指定
+      </td>
+      <td>
+       <p>
+        url...画像ファイルの指定
+       </p>
+       <p>
+        none...背景画像を使用しない
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       background-repeat
+      </td>
+      <td>
+       背景画像の繰り返し表示の仕方を指定
+      </td>
+      <td>
+       <p>
+        repeat...縦，横共に繰り返して表示
+       </p>
+       <p>
+        repeat-x...横方向に繰り返して表示
+       </p>
+       <p>
+        repeat-y...縦方向に繰り返して表示
+       </p>
+       <p>
+        no-repeat...繰り返さない
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       background-size
+      </td>
+      <td>
+       背景画像の大きさを指定
+      </td>
+      <td>
+       <p>
+        数値...数値にpxやrem，%などの単位を付ける
+       </p>
+       <p>
+        キーワード...cover，containで指定
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       background-position
+      </td>
+      <td>
+       背景画像を表示する位置を指定
+      </td>
+      <td>
+       <p>
+        数値...数値にpxやrem，%などの単位を付ける
+       </p>
+       <p>
+        キーワード...横方向はleft（左），center（中央），right（右），縦方向はtop（上），center（中央），bottom（下）
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       background
+      </td>
+      <td>
+       背景関連のプロパティをまとめて指定
+      </td>
+      <td>
+       background-color,background-image,background-repeat,background-attachment,background-positionの値を指定
       </td>
      </tr>
     </table>
