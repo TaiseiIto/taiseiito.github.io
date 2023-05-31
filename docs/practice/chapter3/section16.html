@@ -812,6 +812,7 @@
    </section>
    <section>
     <h2>
+     レイアウト組み(FlexBox)
     </h2>
     <table>
      <tr>
@@ -827,10 +828,132 @@
      </tr>
      <tr>
       <td>
+       display
       </td>
       <td>
+       FlexBoxを使って子要素を並べる
       </td>
       <td>
+       flex
+      </td>
+     </tr>
+     <tr>
+      <td>
+       flex-direction
+      </td>
+      <td>
+       子要素の並ぶ向きを指定
+      </td>
+      <td>
+       <p>
+        row(初期値)...子要素を左から右に配置
+       </p>
+       <p>
+        row-reverse...子要素を右から左に配置
+       </p>
+       <p>
+        column...子要素を上から下に配置
+       </p>
+       <p>
+        column...子要素を下から上に配置
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       flex-wrap
+      </td>
+      <td>
+       子要素の折り返し方法を指定
+      </td>
+      <td>
+       <p>
+        nowrap(初期値)...子要素を折り返しせず，1行に並べる
+       </p>
+       <p>
+        wrap...子要素を折り返し，複数行に上から下に並べる
+       </p>
+       <p>
+        wrap-reverse...子要素を折り返し，複数行に下から上に並べる
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       justify-content
+      </td>
+      <td>
+       水平方向の揃えを指定
+      </td>
+      <td>
+       <p>
+        flex-start(初期値)...行の開始から配置．左揃え
+       </p>
+       <p>
+        flex-end...行末から配置．右揃え
+       </p>
+       <p>
+        center...中央揃え
+       </p>
+       <p>
+        space-between...最初と最後の子要素を両端に配置し，残りの要素は均等に間隔をあけて配置
+       </p>
+       <p>
+        space-around...両端の子要素も含め，均等に間隔をあけて配置
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       align-items
+      </td>
+      <td>
+       垂直方向の揃えを指定
+      </td>
+      <td>
+       <p>
+        stretch(初期値)...親要素の高さ，またはコンテンツの一番多い子要素の高さに合わせて広げて配置
+       </p>
+       <p>
+        flex-start...親要素の開始位置から配置．上揃え
+       </p>
+       <p>
+        flex-end...親要素の終点から配置．下揃え
+       </p>
+       <p>
+        center...中央揃え
+       </p>
+       <p>
+        baseline...ベースラインで揃える
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       align-content
+      </td>
+      <td>
+       複数行にしたときの揃えを指定
+      </td>
+      <td>
+       <p>
+        stretch(初期値)...親要素の高さに合わせて広げて配置
+       </p>
+       <p>
+        flex-start...親要素の開始位置から配置．上揃え
+       </p>
+       <p>
+        flex-end...親要素の終点から配置．下揃え
+       </p>
+       <p>
+        center...中央揃え
+       </p>
+       <p>
+        space-between...最初と最後の子要素を上下の端に配置し，残りの要素は均等に間隔をあけて配置
+       </p>
+       <p>
+        space-around...上下端にある子要素も含め，均等に間隔をあけて配置
+       </p>
       </td>
      </tr>
     </table>
