@@ -1,0 +1,30 @@
+﻿@charset "UTF-8";
+#section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+#number {
+	font-size: 500%;
+	font-style: italic;
+}
+#chapter {
+	font-weight: bolder;
+}
+#titles {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+header {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+table {
+	background-color: #c0c0c0;
+}
+td {
+	background-color: #ffffff;
+}
+
