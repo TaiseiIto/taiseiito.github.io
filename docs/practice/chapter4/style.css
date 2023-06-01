@@ -3,12 +3,14 @@ html {
 	font-size: 100%;
 }
 body {
-	background-image: url(../chapter2/myhead.jpg);
+	background-image: url(../chapter2/myhead.jpg), linear-gradient(#00ffff, #ff00ff);
 	background-size: cover;
+	background-blend-mode: difference;
 	font-family: 'Noto Serif JP', serif;
 	line-height: 1.5;
 	color: #000000;
 	max-width: 1024px;
+	min-height: 100vh;
 	margin: 0 auto;
 }
 header {
