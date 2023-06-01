@@ -3,6 +3,8 @@ html {
 	font-size: 100%;
 }
 body {
+	background-image: url(../chapter2/myhead.jpg);
+	background-size: cover;
 	font-family: 'Noto Serif JP', serif;
 	line-height: 1.5;
 	color: #000000;
@@ -44,5 +46,30 @@ img {
 	margin-bottom: 16px;
 	margin-left: 16px;
 	margin-right: 16px;
+}
+main {
+	text-align: center;
+	margin-top: 10%;
+}
+main>p {
+	margin-top: 32px;
+	margin-bottom: 32px;
+	font-size: 2em;
+}
+h2 {
+	font-size: 5em;
+}
+.button {
+	font-size: 2em;
+	background: #0080ff;
+	color: #ffffff;
+	border-radius: 16px;
+	padding-top: 16px;
+	padding-bottom: 16px;
+	padding-left: 32px;
+	padding-right: 32px;
+}
+.button:hover {
+	background: #00a0ff;
 }
 
