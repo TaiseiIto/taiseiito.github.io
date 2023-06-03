@@ -60,11 +60,12 @@ main {
 	margin-bottom: 50px;
 }
 article {
-	width: 75%;
+	width: 60%;
 	padding-top: 16px;
 	padding-bottom: 16px;
 	padding-left: 16px;
 	padding-right: 16px;
+	order: 2;
 }
 .post-info {
 	position: relative;
@@ -92,7 +93,7 @@ article {
 }
 aside {
 	background-color: #0000ff;
-	width: 25%;
+	width: 20%;
 	padding-top: 16px;
 	padding-bottom: 16px;
 	padding-left: 16px;
@@ -112,6 +113,12 @@ aside>ul {
 }
 aside>ul>li {
 	border-bottom: 1px #ffffff80 solid;
+}
+.banner {
+	order: 1;
+}
+.side-menu {
+	order: 3;
 }
 footer {
 	background: #000000;
