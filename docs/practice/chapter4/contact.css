@@ -55,6 +55,10 @@ h2 {
 	font-size: 500%;
 	text-align: center;
 }
+section {
+	display: flex;
+	justify-content: space-between;
+}
 input, textarea {
 	border-radius: 8px;
 	margin: 10px;
@@ -74,7 +78,6 @@ textarea {
 }
 input[type="submit"] {
 	background: rgb(255, 255, 0);
-	border: 1px #ffff00 solid;
 	width: 64px;
 }
 footer {
