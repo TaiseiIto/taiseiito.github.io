@@ -24,4 +24,9 @@ a {
 	color: inherit;
 	text-decoration: none;
 }
+@media (max-width: 1024px) {
+	header, footer {
+		color: #ff0000;
+	}
+}
 
