@@ -3,7 +3,7 @@ html {
 	font-size: 100%;
 }
 body {
-	background-image: url(../chapter2/myhead.jpg), linear-gradient(#00ffff, #ff00ff);
+	background-image: url(../../images/myhead.jpg), linear-gradient(#00ffff, #ff00ff);
 	background-size: cover;
 	background-blend-mode: difference;
 	font-family: 'Noto Serif JP', serif;

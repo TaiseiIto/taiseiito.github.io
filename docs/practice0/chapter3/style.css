@@ -8,7 +8,7 @@ body {
 	font-size: 0.5rem; /* 0.5 times of the html tag */
 }
 main {
-	background-image: url(../chapter2/myhead.jpg);
+	background-image: url(../../images/myhead.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 }
