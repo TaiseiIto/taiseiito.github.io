@@ -74,4 +74,12 @@ h2 {
 .button:hover {
 	background: #00a0ff;
 }
+footer {
+	background: #000000;
+	text-align: center;
+	color: #ffffff;
+	font-size: 1rem;
+	padding-top: 32px;
+	padding-bottom: 32px;
+}
 
