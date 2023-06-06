@@ -1,0 +1,53 @@
+﻿@charset "UTF-8";
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: 'Noto Serif JP', serif;
+}
+header, footer {
+	background: #000000;
+	color: #ffffff;
+	height: 5vh;
+	text-align: center;
+}
+main {
+	height: 90vh;
+	overflow: auto;
+}
+article {
+	background: linear-gradient(-45deg, #4080ff, #ffffff);
+}
+aside {
+	background: linear-gradient(-45deg, #40ff80, #ffffff);
+}
+a {
+	color: inherit;
+	text-decoration: none;
+}
+@media (max-width: 991px) {
+	main {
+		scroll-snap-type: y mandatory;
+	}
+	article, aside {
+		height: 90vh;
+		scroll-snap-align: start;
+	}
+}
+@media (min-width: 992px) {
+	main {
+		display: flex;
+		justify-content: space-between;
+	}
+	article, aside {
+		height: 180vh;
+	}
+	article {
+		width: 70%;
+	}
+	aside {
+		width: 30%;
+	}
+}
+
