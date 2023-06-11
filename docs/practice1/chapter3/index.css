@@ -129,6 +129,19 @@ div.mechanical-button:active {
 	left: 1px;
 	right: -1px;
 }
+ul>li::before {
+	list-style: none;
+	content: '';
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: #ff0000;
+	display: inline-block;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
 @media (max-width: 991px) {
 	main {
 		scroll-snap-type: y mandatory;
