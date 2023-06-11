@@ -129,6 +129,18 @@ div.mechanical-button:active {
 	left: 1px;
 	right: -1px;
 }
+section.side-box {
+	margin: 20px;
+	padding: 20px;
+	border: 5px solid rgba(255, 0, 0, 0.25);
+	border-radius: 5px;
+	outline: 5px solid rgba(0, 0, 0, 0.25);
+	outline-offset: 5px;
+	display: inline-block;
+}
+ul, ol {
+	list-style-type: none;
+}
 ul>li::before {
 	content: '';
 	width: 8px;
