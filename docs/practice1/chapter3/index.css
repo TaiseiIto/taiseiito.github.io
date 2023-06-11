@@ -158,6 +158,27 @@ ol>li::before {
 	margin-left: 5px;
 	margin-right: 5px;
 }
+blockquote {
+	position: relative;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+blockquote::before, blockquote::after {
+	position: absolute;
+	font-size: 5rem;
+}
+blockquote::before {
+	content: '\201C';
+	top: 0;
+	left: 0;
+}
+blockquote::after {
+	content: '\201D';
+	bottom: 0;
+	right: 0;
+}
 @media (max-width: 991px) {
 	main {
 		scroll-snap-type: y mandatory;
