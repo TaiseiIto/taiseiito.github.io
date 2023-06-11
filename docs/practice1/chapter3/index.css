@@ -130,12 +130,28 @@ div.mechanical-button:active {
 	right: -1px;
 }
 ul>li::before {
-	list-style: none;
 	content: '';
 	width: 8px;
 	height: 8px;
 	border-radius: 50%;
 	background: #ff0000;
+	display: inline-block;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+ol>li {
+	counter-increment: list;
+}
+ol>li::before {
+	content: counter(list);
+	color: #ffffff;
+	background: #ff0000;
+	height: 30px;
+	width: 30px;
+	border-radius: 50%;
+	text-align: center;
 	display: inline-block;
 	margin-top: 5px;
 	margin-bottom: 5px;
