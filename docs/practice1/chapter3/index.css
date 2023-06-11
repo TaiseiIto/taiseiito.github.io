@@ -11,6 +11,34 @@ header, footer {
 	color: #ffffff;
 	height: 5vh;
 	text-align: center;
+	display: flex;
+	justify-content: space-between;
+}
+ul.main-menu {
+	display: flex;
+}
+ul.main-menu>li, ul.sub-menu>li {
+	width: 200px;
+	border-bottom: 1px solid #ffffff;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+ul.sub-menu>li:hover {
+	color: #ff0000;
+	border-bottom: 1px solid #ff0000;
+}
+ul.sub-menu {
+	background: #000000;
+	display: none;
+	position: absolute;
+}
+li.has-menu:hover>ul.sub-menu {
+	display: block;
+}
+header ul>li::before {
+	content: none;
 }
 main {
 	height: 90vh;
