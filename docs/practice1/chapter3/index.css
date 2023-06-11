@@ -11,6 +11,8 @@ header, footer {
 	color: #ffffff;
 	height: 5vh;
 	text-align: center;
+}
+header {
 	display: flex;
 	justify-content: space-between;
 }
@@ -264,4 +266,9 @@ blockquote.square::after {
 		shape-outside: circle();
 		float: left;
 	}
+	section.fixed-section {
+		position: sticky;
+		top: 0;
+	}
 }
+
