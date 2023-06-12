@@ -14,23 +14,30 @@ address {
 	display: flex;
 	font-style: normal;
 }
-footer {
+body {
 	display: flex;
+	flex-direction: column;
+	height: 100vh;
 	justify-content: space-between;
 }
 footer div {
-	margin: 20px 100px;
+	margin: 0 100px;
 }
 h1 {
 	padding: 0 100px;
 }
 header, footer {
+	align-items: center;
 	background: #000000;
 	color: #ffffff;
-}
-header {
 	display: flex;
 	justify-content: space-between;
+	min-height: 50px;
+}
+main {
+	display: flex;
+	justify-content: center;
+	overflow: auto;
 }
 nav>ul {
 	display: flex;
