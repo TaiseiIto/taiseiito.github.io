@@ -14,4 +14,32 @@ header, footer {
 	background: #000000;
 	color: #ffffff;
 }
+header {
+	display: flex;
+	justify-content: space-between;
+}
+nav>ul {
+	display: flex;
+}
+nav>ul>li>ul {
+	background: #000000;
+	display: none;
+	position: absolute;
+}
+nav>ul>li:hover>ul {
+	display: block;
+}
+nav li>div {
+	border-bottom: 1px solid #ffffff;
+	margin: 5px;
+	text-align: center;
+	width: 200px;
+}
+nav li>div:hover {
+	color: #ff0000;
+	border-bottom: 1px solid #ff0000;
+}
+ol, ul {
+	list-style-type: none;
+}
 
