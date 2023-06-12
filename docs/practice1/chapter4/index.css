@@ -7,8 +7,22 @@ a {
 	color: inherit;
 	text-decoration: none;
 }
+a:hover {
+	color: #ff0000;
+}
 address {
+	display: flex;
 	font-style: normal;
+}
+footer {
+	display: flex;
+	justify-content: space-between;
+}
+footer div {
+	margin: 20px 100px;
+}
+h1 {
+	padding: 0 100px;
 }
 header, footer {
 	background: #000000;
@@ -37,6 +51,7 @@ nav li>div {
 }
 nav li>div:hover {
 	color: #ff0000;
+	cursor: pointer;
 	border-bottom: 1px solid #ff0000;
 }
 ol, ul {
