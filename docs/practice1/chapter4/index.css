@@ -14,6 +14,17 @@ address {
 	display: flex;
 	font-style: normal;
 }
+article {
+	background: #ff8080;
+	width: 800px;
+}
+article, aside {
+	height: 200vh;
+}
+aside {
+	background: #80ff80;
+	width: 400px;
+}
 body {
 	display: flex;
 	flex-direction: column;
