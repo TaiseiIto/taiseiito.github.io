@@ -15,7 +15,7 @@ address {
 	font-style: normal;
 }
 article {
-	background: #ff8080;
+	background: url('../../images/myhead.jpg') right top / 100% auto;
 	width: 800px;
 }
 article, aside {
@@ -36,6 +36,12 @@ footer div {
 }
 h1 {
 	padding: 0 100px;
+}
+h2 {
+	background: rgba(255, 255, 255, 0.8);
+	display: inline-block;
+	padding: 1rem;
+	margin: 1rem;
 }
 header, footer {
 	align-items: center;
@@ -74,5 +80,31 @@ nav li>div:hover {
 }
 ol, ul {
 	list-style-type: none;
+}
+.bar-chart {
+	background: #ffffff;
+	padding: 10px;
+}
+.ct-bar {
+	stroke-width: 100px;
+}
+.ct-label {
+	font-size: 1rem;
+	fill: #000000;
+}
+.ct-series-a>.ct-slice-pie {
+	fill: #ffc0c0;
+}
+.ct-series-a>.ct-bar {
+	stroke: #0000ff;
+}
+.ct-series-b>.ct-slice-pie {
+	fill: #c0ffc0;
+}
+.ct-series-c>.ct-slice-pie {
+	fill: #c0c0ff;
+}
+.home-chart {
+	text-align: center;
 }
 
