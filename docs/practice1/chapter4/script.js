@@ -29,3 +29,14 @@ var barOptions = {
 
 new Chartist.Bar('.bar-chart', barData, barOptions);
 
+var myDoughnutChart = new Chart(document.getElementById('myChart'), {
+	type: 'doughnut',
+	data: {
+		labels: ['項目1', '項目2', '項目3'],
+		datasets: [
+			data: [4, 5, 6],
+			backgroundColor: ['#ff8080', '#80ff80', '#8080ff'],
+		],
+	},
+});
+
