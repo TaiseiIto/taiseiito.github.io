@@ -29,7 +29,7 @@ var barOptions = {
 
 new Chartist.Bar('.bar-chart', barData, barOptions);
 
-var myDoughnutChart = new Chart(document.getElementById('myChart'), {
+var myDoughnutChart = new Chart(document.getElementById('doughnut-chart'), {
 	type: 'doughnut',
 	data: {
 		labels: ['項目1', '項目2', '項目3'],
@@ -38,5 +38,16 @@ var myDoughnutChart = new Chart(document.getElementById('myChart'), {
 			backgroundColor: ['#ff8080', '#80ff80', '#8080ff'],
 		}],
 	},
+});
+
+const frappe-chart = new frappe.Chart('#frappe-chart', {
+	title: 'グラフタイトル',
+	data: {
+		labels: ['項目1', '項目2', '項目3'],
+		datasets: [{
+			values: [6, 5, 4],
+		}],
+	},
+	type: 'line',
 });
 
