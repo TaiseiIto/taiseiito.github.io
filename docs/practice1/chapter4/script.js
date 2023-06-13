@@ -33,10 +33,10 @@ var myDoughnutChart = new Chart(document.getElementById('myChart'), {
 	type: 'doughnut',
 	data: {
 		labels: ['項目1', '項目2', '項目3'],
-		datasets: [
+		datasets: [{
 			data: [4, 5, 6],
 			backgroundColor: ['#ff8080', '#80ff80', '#8080ff'],
-		],
+		}],
 	},
 });
 
