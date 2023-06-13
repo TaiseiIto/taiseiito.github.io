@@ -85,6 +85,9 @@ ol, ul {
 	background: #ffffff;
 	padding: 10px;
 }
+.chart {
+	background: #ffffff;
+}
 .ct-bar {
 	stroke-width: 100px;
 }

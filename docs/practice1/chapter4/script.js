@@ -40,7 +40,7 @@ var myDoughnutChart = new Chart(document.getElementById('doughnut-chart'), {
 	},
 });
 
-const frappe-chart = new frappe.Chart('#frappe-chart', {
+const chart = new frappe.Chart('#chart', {
 	title: 'グラフタイトル',
 	data: {
 		labels: ['項目1', '項目2', '項目3'],
