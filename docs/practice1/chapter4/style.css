@@ -88,6 +88,16 @@ section {
 section:nth-child(even) {
 	flex-direction: row-reverse;
 }
+table {
+	margin: 10px;
+	padding: 10px;
+}
+th {
+	background: rgba(255, 192, 128, 0.7);
+}
+td {
+	background: rgba(255, 255, 255, 0.7);
+}
 .bar-chart, .chart {
 	background: rgba(255, 255, 255, 0.7);
 	margin: 10px;
@@ -112,11 +122,11 @@ section:nth-child(even) {
 .ct-series-c>.ct-slice-pie {
 	fill: #c0c0ff;
 }
-.graph, .graph-description {
+.graph, .description {
 	width: 45%;
 	text-align: center;
 }
-.graph-description {
+.description {
 	background: rgba(255, 255, 255, 0.7);
 	margin: 10px;
 	padding: 10px;
