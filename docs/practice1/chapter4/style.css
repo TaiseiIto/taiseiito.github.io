@@ -85,12 +85,13 @@ section {
 	display: flex;
 	justify-content: space-between;
 }
-.bar-chart {
-	background: #ffffff;
-	padding: 10px;
+section:nth-child(even) {
+	flex-direction: row-reverse;
 }
-.chart {
-	background: #ffffff;
+.bar-chart, .chart {
+	background: rgba(255, 255, 255, 0.7);
+	margin: 10px;
+	padding: 10px;
 }
 .ct-bar {
 	stroke-width: 10px;
@@ -110,9 +111,6 @@ section {
 }
 .ct-series-c>.ct-slice-pie {
 	fill: #c0c0ff;
-}
-.flex-reverse {
-	flex-direction: row-reverse;
 }
 .graph, .graph-description {
 	width: 45%;
