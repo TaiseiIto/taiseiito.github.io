@@ -4,8 +4,8 @@
 };
 
 var pieOptions = {
-	width: '512px',
-	height: '512px',
+	width: '256px',
+	height: '256px',
 };
 
 new Chartist.Pie('.pie-chart', pieData, pieOptions);
@@ -23,8 +23,8 @@ var barOptions = {
 			return value + '単位'
 		},
 	},
-	width: '512px',
-	height: '512px',
+	width: '256px',
+	height: '256px',
 };
 
 new Chartist.Bar('.bar-chart', barData, barOptions);

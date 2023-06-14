@@ -81,6 +81,10 @@ nav li>div:hover {
 ol, ul {
 	list-style-type: none;
 }
+section {
+	display: flex;
+	justify-content: space-between;
+}
 .bar-chart {
 	background: #ffffff;
 	padding: 10px;
@@ -89,7 +93,7 @@ ol, ul {
 	background: #ffffff;
 }
 .ct-bar {
-	stroke-width: 100px;
+	stroke-width: 10px;
 }
 .ct-label {
 	font-size: 1rem;
@@ -107,7 +111,16 @@ ol, ul {
 .ct-series-c>.ct-slice-pie {
 	fill: #c0c0ff;
 }
-.home-chart {
+.flex-reverse {
+	flex-direction: row-reverse;
+}
+.graph, .graph-description {
+	width: 45%;
 	text-align: center;
+}
+.graph-description {
+	background: rgba(255, 255, 255, 0.7);
+	margin: 10px;
+	padding: 10px;
 }
 
