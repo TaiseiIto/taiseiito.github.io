@@ -59,47 +59,62 @@ section {
 }
 #blend-mode-multiply {
 	background-blend-mode: multiply;
+	mix-blend-mode: multiply;
 }
 #blend-mode-screen {
 	background-blend-mode: screen;
+	mix-blend-mode: screen;
 }
 #blend-mode-overlay {
 	background-blend-mode: overlay;
+	mix-blend-mode: overlay;
 }
 #blend-mode-darken {
 	background-blend-mode: darken;
+	mix-blend-mode: darken;
 }
 #blend-mode-lighten {
 	background-blend-mode: lighten;
+	mix-blend-mode: lighten;
 }
 #blend-mode-color-dodge {
 	background-blend-mode: color-dodge;
+	mix-blend-mode: color-dodge;
 }
 #blend-mode-color-burn {
 	background-blend-mode: color-burn;
+	mix-blend-mode: color-burn;
 }
 #blend-mode-hard-light {
 	background-blend-mode: hard-light;
+	mix-blend-mode: hard-light;
 }
 #blend-mode-soft-light {
 	background-blend-mode: soft-light;
+	mix-blend-mode: soft-light;
 }
 #blend-mode-difference {
 	background-blend-mode: difference;
+	mix-blend-mode: difference;
 }
 #blend-mode-exclusion {
 	background-blend-mode: exclusion;
+	mix-blend-mode: exclusion;
 }
 #blend-mode-hue {
 	background-blend-mode: hue;
+	mix-blend-mode: hue;
 }
 #blend-mode-saturation {
 	background-blend-mode: saturation;
+	mix-blend-mode: saturation;
 }
 #blend-mode-color {
 	background-blend-mode: color;
+	mix-blend-mode: color;
 }
 #blend-mode-luminosity {
 	background-blend-mode: luminosity;
+	mix-blend-mode: luminosity;
 }
 
