@@ -8,7 +8,7 @@ a {
 	text-decoration: none;
 }
 a:hover {
-	color: #ff0000;
+	color: red;
 }
 address>a {
 	margin-left: 50px;
@@ -16,8 +16,8 @@ address>a {
 }
 header, footer {
 	align-items: center;
-	background: #000000;
-	color: #ffffff;
+	background: black;
+	color: white;
 	display: flex;
 	justify-content: space-between;
 	min-height: 50px;
@@ -36,6 +36,12 @@ header>nav>ul>li {
 }
 html {
 	scroll-behavior: smooth;
+	--dark-yellow: #c0c000;
+	--my-head: url(../../images/myhead.jpg);
+	--image-size: 200px;
+	--sky: #60c0ff;
+	--earth: #80c040;
+	--background: linear-gradient(var(--sky), var(--earth));
 }
 ol, ul {
 	list-style-type: none;
@@ -45,17 +51,17 @@ section {
 	padding-top: 100px;
 }
 .blend-mode {
-	background-color: #c0c000;
-	background-image: url(../../images/myhead.jpg);
+	background-color: var(--dark-yellow);
+	background-image: var(--my-head);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: 200px;
-	width: 200px;
+	height: var(--image-size);
+	width: var(--image-size);
 }
 #blend-mode-table {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(var(--image-size), 1fr));
 }
 #blend-mode-multiply {
 	background-blend-mode: multiply;
@@ -116,5 +122,10 @@ section {
 #blend-mode-luminosity {
 	background-blend-mode: luminosity;
 	mix-blend-mode: luminosity;
+}
+#custom-property-background {
+	background: var(--background);
+	min-height: var(--image-size);
+	min-width: var(--image-size);
 }
 
