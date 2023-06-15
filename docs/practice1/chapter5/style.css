@@ -44,12 +44,62 @@ section {
 	min-height: 100vh;
 	padding-top: 100px;
 }
-#section1 {
-	background-blend-mode: screen;
+.blend-mode {
 	background-color: #c0c000;
 	background-image: url(../../images/myhead.jpg);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+	height: 200px;
+	width: 200px;
+}
+#blend-mode-table {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+#blend-mode-multiply {
+	background-blend-mode: multiply;
+}
+#blend-mode-screen {
+	background-blend-mode: screen;
+}
+#blend-mode-overlay {
+	background-blend-mode: overlay;
+}
+#blend-mode-darken {
+	background-blend-mode: darken;
+}
+#blend-mode-lighten {
+	background-blend-mode: lighten;
+}
+#blend-mode-color-dodge {
+	background-blend-mode: color-dodge;
+}
+#blend-mode-color-burn {
+	background-blend-mode: color-burn;
+}
+#blend-mode-hard-light {
+	background-blend-mode: hard-light;
+}
+#blend-mode-soft-light {
+	background-blend-mode: soft-light;
+}
+#blend-mode-difference {
+	background-blend-mode: difference;
+}
+#blend-mode-exclusion {
+	background-blend-mode: exclusion;
+}
+#blend-mode-hue {
+	background-blend-mode: hue;
+}
+#blend-mode-saturation {
+	background-blend-mode: saturation;
+}
+#blend-mode-color {
+	background-blend-mode: color;
+}
+#blend-mode-luminosity {
+	background-blend-mode: luminosity;
 }
 
