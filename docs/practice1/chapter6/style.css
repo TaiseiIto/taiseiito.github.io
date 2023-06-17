@@ -12,20 +12,9 @@ a:hover {
 }
 address {
 	display: flex;
-	justify-content: space-between;
 	font-style: normal;
+	justify-content: space-between;
 	min-width: 200px;
-}
-article {
-	align-items: center;
-	display: flex;
-	flex-direction: column;
-	height: 100%;
-	justify-content: center;
-	position: absolute;
-	top: 0;
-	width: 100%;
-	z-index: 2;
 }
 body {
 	display: flex;
@@ -42,24 +31,43 @@ header, footer {
 	min-height: 50px;
 	padding: 0 50px;
 }
-main {
-	align-items: center;
-	display: flex;
-	justify-content: center;
-	overflow: clip;
-	position: relative;
+main{
+	height: 100%;
+	overflow: auto;
+	scroll-snap-type: y mandatory;
 }
-main>video {
+video {
 	height: 100%;
 	object-fit: cover;
 	object-position: center;
 	width: 100%;
 	z-index: 0;
 }
-#video-filter {
-	background-image: repeating-linear-gradient(0deg, transparent, transparent 1px, rgba(255, 255, 255, 0.5) 1px, rgba(255, 255, 255, 0.5) 2px);
-	position: absolute;
+section {
 	height: 100%;
+	position: relative;
+	scroll-snap-align: center;
+	width: 100%;
+}
+section#test {
+	background: red;
+}
+.document {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	justify-content: center;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 2;
+}
+.video-filter {
+	background-image: repeating-linear-gradient(0deg, transparent, transparent 1px, rgba(255, 255, 255, 0.5) 1px, rgba(255, 255, 255, 0.5) 2px);
+	height: 100%;
+	position: absolute;
+	top: 0;
 	width: 100%;
 	z-index: 1;
 }
