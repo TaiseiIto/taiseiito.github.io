@@ -141,4 +141,27 @@ section {
 	background: red;
 	width: 100%;
 }
+#key-frame {
+	animation: background 3s linear infinite;
+	display: inline-block;
+	min-height: var(--image-size);
+	min-width: var(--image-size);
+}
+#key-frame:hover {
+	animation-duration: 0.5s;
+}
+@keyframes background {
+	0% {
+		background: #ff0000;
+	}
+	33% {
+		background: #00ff00;
+	}
+	66% {
+		background: #0000ff;
+	}
+	100% {
+		background: #ff0000;
+	}
+}
 
