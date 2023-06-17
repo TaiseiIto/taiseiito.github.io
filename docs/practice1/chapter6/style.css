@@ -16,6 +16,17 @@ address {
 	font-style: normal;
 	min-width: 200px;
 }
+article {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	justify-content: center;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 2;
+}
 body {
 	display: flex;
 	flex-direction: column;
@@ -35,12 +46,21 @@ main {
 	align-items: center;
 	display: flex;
 	justify-content: center;
-	overflow: auto;
+	overflow: clip;
+	position: relative;
 }
 main>video {
 	height: 100%;
 	object-fit: cover;
 	object-position: center;
 	width: 100%;
+	z-index: 0;
+}
+#video-filter {
+	background-image: repeating-linear-gradient(0deg, transparent, transparent 1px, rgba(255, 255, 255, 0.5) 1px, rgba(255, 255, 255, 0.5) 2px);
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	z-index: 1;
 }
 
