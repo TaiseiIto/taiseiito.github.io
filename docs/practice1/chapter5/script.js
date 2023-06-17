@@ -3,6 +3,10 @@ const menu = document.querySelector('#menu');
 
 button.addEventListener('click', () => {
 	menu.classList.toggle('open-menu');
-	console.log('Hello, World!');
+	if (button.innerHTML === 'Menu') {
+		button.innerHTML = 'Close';
+	} else {
+		button.innerHTML = 'Menu';
+	}
 });
 
