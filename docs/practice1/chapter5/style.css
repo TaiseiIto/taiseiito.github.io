@@ -54,6 +54,12 @@ nav {
 	min-width: 200px;
 	text-align: center;
 }
+nav>ul {
+	display: none;
+}
+nav>ul.open-menu {
+	display: inline;
+}
 nav>ul>li {
 	padding: 10px 20px;
 }

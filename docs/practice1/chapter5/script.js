@@ -1,8 +1,8 @@
-﻿const btn = document.querySelector('.btn-menu');
-const nav = document.querySelector('.main-nav');
+﻿const button = document.querySelector('#menu-button');
+const menu = document.querySelector('#menu');
 
-btn.addEventListener('click', () => {
-	nav.classList.toggle('open-menu');
+button.addEventListener('click', () => {
+	menu.classList.toggle('open-menu');
 	console.log('Hello, World!');
 });
 
