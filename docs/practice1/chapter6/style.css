@@ -31,17 +31,17 @@ header, footer {
 	min-height: 50px;
 	padding: 0 50px;
 }
-main{
-	height: 100%;
-	overflow: auto;
-	scroll-snap-type: y mandatory;
-}
-video {
+iframe, video {
 	height: 100%;
 	object-fit: cover;
 	object-position: center;
 	width: 100%;
 	z-index: 0;
+}
+main{
+	height: 100%;
+	overflow: auto;
+	scroll-snap-type: y mandatory;
 }
 section {
 	height: 100%;
