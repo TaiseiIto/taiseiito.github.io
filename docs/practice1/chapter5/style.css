@@ -55,10 +55,15 @@ nav {
 	text-align: center;
 }
 nav>ul {
-	display: none;
+	background: black;
+	position: absolute;
+	overflow: hidden;
+	transition: 1s;
+	right: -200px;
+	min-width: 200px;
 }
 nav>ul.open-menu {
-	display: inline;
+	right: 0;
 }
 nav>ul>li {
 	padding: 10px 20px;
