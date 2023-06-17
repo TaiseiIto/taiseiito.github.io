@@ -10,6 +10,9 @@ a {
 a:hover {
 	color: red;
 }
+address {
+	font-style: normal;
+}
 address>a {
 	margin-left: 50px;
 	margin-right: 50px;
@@ -47,7 +50,6 @@ ol, ul {
 	list-style-type: none;
 }
 section {
-	min-height: 100vh;
 	padding-top: 100px;
 }
 .blend-mode {
@@ -127,5 +129,14 @@ section {
 	background: var(--background);
 	min-height: var(--image-size);
 	min-width: var(--image-size);
+}
+#transition {
+	display: inline-block;
+	min-height: var(--image-size);
+	min-width: var(--image-size);
+	transition: background 1s linear;
+}
+#transition:hover {
+	background: red;
 }
 
