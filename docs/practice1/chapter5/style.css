@@ -17,6 +17,17 @@ address>a {
 	margin-left: 50px;
 	margin-right: 50px;
 }
+button {
+	background: black;
+	border: 1px solid white;
+	color: white;
+	padding: 10px 20px;
+	margin: 10px;
+}
+button:active {
+	border-color: red;
+	color: red;
+}
 header, footer {
 	align-items: center;
 	background: black;
@@ -30,13 +41,6 @@ header {
 	position: fixed;
 	z-index: 1;
 }
-header>nav>ul {
-	display: flex;
-	justify-content: space-between;
-}
-header>nav>ul>li {
-	width: 100px;
-}
 html {
 	scroll-behavior: smooth;
 	--dark-yellow: #c0c000;
@@ -45,6 +49,13 @@ html {
 	--sky: #60c0ff;
 	--earth: #80c040;
 	--background: linear-gradient(var(--sky), var(--earth));
+}
+nav {
+	min-width: 200px;
+	text-align: center;
+}
+nav>ul>li {
+	padding: 10px 20px;
 }
 ol, ul {
 	list-style-type: none;
