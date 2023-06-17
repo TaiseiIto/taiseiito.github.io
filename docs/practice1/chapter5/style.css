@@ -134,9 +134,11 @@ section {
 	display: inline-block;
 	min-height: var(--image-size);
 	min-width: var(--image-size);
-	transition: background 1s linear;
+	width: 50%;
+	transition: background 0.5s linear, width 1s linear;
 }
 #transition:hover {
 	background: red;
+	width: 100%;
 }
 
