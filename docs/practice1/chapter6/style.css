@@ -26,6 +26,7 @@ div#grid {
 	display: grid;
 	grid-template-columns: repeat(4, 25%);
 	grid-template-rows: repeat(4, 25%);
+	overflow: hidden;
 }
 div#grid>img {
 	height: 100%;
@@ -52,6 +53,9 @@ img {
 }
 img:hover {
 	filter: none !important;
+	transform: scale(1.5);
+	position: relative;
+	z-index: 2;
 }
 img#big-image {
 	grid-row: 2/4;
@@ -79,6 +83,19 @@ img#saturate {
 img#sepia {
 	filter: sepia(100%);
 }
+img#translate:hover {
+	transform: scale(4) translate(-200px, -200px);
+}
+img#rotate:hover {
+	transform: scale(4) rotate(180deg);
+}
+img#skew:hover {
+	transform: scale(4) skew(40deg, 40deg);
+}
+img#get-big:hover {
+	transform: scale(8);
+	transform-origin: right bottom;
+}
 main{
 	height: 100%;
 	overflow: auto;
@@ -100,7 +117,7 @@ section {
 	position: absolute;
 	top: 0;
 	width: 100%;
-	z-index: 2;
+	z-index: 3;
 }
 .video-filter {
 	background-image: repeating-linear-gradient(0deg, transparent, transparent 1px, rgba(255, 255, 255, 0.5) 1px, rgba(255, 255, 255, 0.5) 2px);
