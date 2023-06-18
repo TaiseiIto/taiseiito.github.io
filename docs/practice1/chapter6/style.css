@@ -47,6 +47,10 @@ iframe, video, div#grid {
 	width: 100%;
 	z-index: 0;
 }
+img#big-image {
+	grid-row: 2/4;
+	grid-column: 2/4;
+}
 main{
 	height: 100%;
 	overflow: auto;
