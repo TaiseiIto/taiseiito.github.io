@@ -22,6 +22,15 @@ body {
 	height: 100vh;
 	justify-content: space-between;
 }
+div#grid {
+	display: grid;
+	grid-template-columns: repeat(4, 25%);
+	grid-template-rows: repeat(4, 25%);
+}
+div#grid>img {
+	height: 100%;
+	width: 100%;
+}
 header, footer {
 	align-items: center;
 	background: black;
@@ -31,7 +40,7 @@ header, footer {
 	min-height: 50px;
 	padding: 0 50px;
 }
-iframe, video {
+iframe, video, div#grid {
 	height: 100%;
 	object-fit: cover;
 	object-position: center;
@@ -48,9 +57,6 @@ section {
 	position: relative;
 	scroll-snap-align: center;
 	width: 100%;
-}
-section#test {
-	background: red;
 }
 .document {
 	align-items: center;
