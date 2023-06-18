@@ -32,6 +32,12 @@ div.grid img {
 	height: 100%;
 	width: 100%;
 }
+div#light-mode {
+	display: none;
+}
+div#dark-mode {
+	display: none;
+}
 header, footer {
 	align-items: center;
 	background: black;
@@ -131,5 +137,15 @@ section {
 	top: 0;
 	width: 100%;
 	z-index: 1;
+}
+@media (prefers-color-scheme: light) {
+	div#light-mode {
+		display: block;
+	}
+}
+@media (prefers-color-scheme: dark) {
+	div#dark-mode {
+		display: block;
+	}
 }
 
