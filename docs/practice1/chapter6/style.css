@@ -22,13 +22,13 @@ body {
 	height: 100vh;
 	justify-content: space-between;
 }
-div#grid {
+div.grid {
 	display: grid;
 	grid-template-columns: repeat(4, 25%);
 	grid-template-rows: repeat(4, 25%);
 	overflow: hidden;
 }
-div#grid img {
+div.grid img {
 	height: 100%;
 	width: 100%;
 }
@@ -41,7 +41,7 @@ header, footer {
 	min-height: 50px;
 	padding: 0 50px;
 }
-iframe, video, div#grid {
+iframe, video, div.grid {
 	height: 100%;
 	object-fit: cover;
 	object-position: center;
@@ -119,6 +119,9 @@ section {
 	top: 0;
 	width: 100%;
 	z-index: 3;
+}
+.lum-lightbox.lum-open {
+	z-index: 4;
 }
 .video-filter {
 	background-image: repeating-linear-gradient(0deg, transparent, transparent 1px, rgba(255, 255, 255, 0.5) 1px, rgba(255, 255, 255, 0.5) 2px);
