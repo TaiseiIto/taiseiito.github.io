@@ -48,15 +48,36 @@ iframe, video, div#grid {
 	z-index: 0;
 }
 img {
-	filter: grayscale(100%);
 	transition: 1s;
 }
 img:hover {
-	filter: none;
+	filter: none !important;
 }
 img#big-image {
 	grid-row: 2/4;
 	grid-column: 2/4;
+	filter: grayscale(100%);
+}
+img#blur {
+	filter: blur(50px);
+}
+img#brightness {
+	filter: brightness(0%);
+}
+img#contrast {
+	filter: contrast(0%);
+}
+img#hue-rotate {
+	filter: hue-rotate(360deg);
+}
+img#invert {
+	filter: invert(100%);
+}
+img#saturate {
+	filter: saturate(1000%);
+}
+img#sepia {
+	filter: sepia(100%);
 }
 main{
 	height: 100%;
