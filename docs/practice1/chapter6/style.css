@@ -97,7 +97,7 @@ img#get-big:hover {
 	transform: scale(8);
 	transform-origin: right bottom;
 }
-main{
+main {
 	height: 100%;
 	overflow: auto;
 	scroll-snap-type: y mandatory;
