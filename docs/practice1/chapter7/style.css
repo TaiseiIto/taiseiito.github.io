@@ -22,7 +22,8 @@ body {
 	justify-content: space-between;
 }
 h1, footer div {
-	margin: 0 5vw;
+	width: 10vw;
+	text-align: center;
 }
 header, footer {
 	align-items: center;
@@ -35,5 +36,9 @@ header, footer {
 main {
 	height: 100%;
 	overflow: auto;
+}
+#one-third-width {
+	background: #00ff00;
+	width: calc(100% / 3);
 }
 
