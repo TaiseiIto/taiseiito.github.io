@@ -37,6 +37,16 @@ body {
   overflow: auto;
   >div#one-third-width {
    background: #00ff00;
+   padding: {
+    top: 10px;
+    bottom: 20px;
+    left: 30px;
+    right: 40px;
+   }
+   margin: {
+    top: 10px;
+    left: 100px;
+   }
    width: calc(100% / 3);
   }
  }
