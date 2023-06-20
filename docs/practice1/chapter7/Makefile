@@ -1,11 +1,10 @@
 CSS = .css
 SCSS = .scss
-SOURCES = $(wildcard *$(SCSS))
+SOURCES = $(wildcard [!_]*$(SCSS))
 TARGETS = $(SOURCES:$(SCSS)=$(CSS))
 SASS = sass
 EXPANDED = --style expanded
 RM = del
-
 
 all: $(TARGETS)
 
