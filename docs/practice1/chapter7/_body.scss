@@ -1,5 +1,4 @@
-﻿@charset "UTF-8";
-body {
+﻿body {
  display: flex;
  flex-direction: column;
  height: 100vh;
@@ -28,24 +27,6 @@ body {
    text-align: center;
   }
  }
- main {
-  height: 100%;
-  overflow: auto;
-  >div#one-third-width {
-   $unit: 10px;
-   background: #00ff00;
-   padding: {
-    top: $unit;
-    bottom: calc(2 * #{$unit});
-    left: calc(3 * #{$unit});
-    right: calc(4 * #{$unit});
-   }
-   margin: {
-    top: $unit;
-    left: calc(10 * #{$unit});
-   }
-   width: calc(100% / 3);
-  }
- }
+ @import "body/main";
 }
 
