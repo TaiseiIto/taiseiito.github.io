@@ -47,5 +47,13 @@ body main > div#one-third-width {
   margin-left: calc(10 * 10px);
   width: calc(100% / 3);
 }
+body main div#circles {
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  grid-template-rows: repeat(3, 300px);
+}
+body main div#circles div {
+  background: black;
+}
 
 /*# sourceMappingURL=style.css.map */
