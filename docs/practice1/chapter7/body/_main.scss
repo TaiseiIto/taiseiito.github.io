@@ -28,32 +28,37 @@ main {
   grid-template-columns: repeat(3, #{$unit});
   grid-template-rows: repeat(3, #{$unit});
   justify-content: center;
-  div#big-red {
-   @include circle(300px, #ff0000);
-  }
-  div#big-green {
-   @include circle(300px, #00ff00);
-  }
-  div#big-blue {
-   @include circle(300px, #0000ff);
-  }
-  div#medium-red {
-   @include circle(200px, #ff0000);
-  }
-  div#medium-green {
-   @include circle(200px, #00ff00);
-  }
-  div#medium-blue {
-   @include circle(200px, #0000ff);
-  }
-  div#small-red {
-   @include circle(100px, #ff0000);
-  }
-  div#small-green {
-   @include circle(100px, #00ff00);
-  }
-  div#small-blue {
-   @include circle(100px, #0000ff);
+  div {
+   display: grid;
+   justify-content: center;
+   align-items: center;
+   div#big-red {
+    @include circle(300px, #ff0000);
+   }
+   div#big-green {
+    @include circle(300px, #00ff00);
+   }
+   div#big-blue {
+    @include circle(300px, #0000ff);
+   }
+   div#medium-red {
+    @include circle(200px, #ff0000);
+   }
+   div#medium-green {
+    @include circle(200px, #00ff00);
+   }
+   div#medium-blue {
+    @include circle(200px, #0000ff);
+   }
+   div#small-red {
+    @include circle(100px, #ff0000);
+   }
+   div#small-green {
+    @include circle(100px, #00ff00);
+   }
+   div#small-blue {
+    @include circle(100px, #0000ff);
+   }
   }
  }
 }
