@@ -1,4 +1,10 @@
-﻿main {
+﻿@mixin circle($size, $background) {
+ width: $size;
+ height: $size;
+ background: $background;
+ border-radius: 50%;
+}
+main {
  height: 100%;
  overflow: auto;
  >div#one-third-width {
@@ -21,8 +27,33 @@
   display: grid;
   grid-template-columns: repeat(3, #{$unit});
   grid-template-rows: repeat(3, #{$unit});
-  div {
-   background: black;
+  justify-content: center;
+  div#big-red {
+   @include circle(300px, #ff0000);
+  }
+  div#big-green {
+   @include circle(300px, #00ff00);
+  }
+  div#big-blue {
+   @include circle(300px, #0000ff);
+  }
+  div#medium-red {
+   @include circle(200px, #ff0000);
+  }
+  div#medium-green {
+   @include circle(200px, #00ff00);
+  }
+  div#medium-blue {
+   @include circle(200px, #0000ff);
+  }
+  div#small-red {
+   @include circle(100px, #ff0000);
+  }
+  div#small-green {
+   @include circle(100px, #00ff00);
+  }
+  div#small-blue {
+   @include circle(100px, #0000ff);
   }
  }
 }
