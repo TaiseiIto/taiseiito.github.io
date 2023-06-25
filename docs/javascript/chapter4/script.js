@@ -4,6 +4,7 @@ const busyCursorFramePeriod = 10;
 const loading = document.querySelector('#loading');
 const busyCursor = document.querySelector('#busy-cursor');
 const themeButton = document.querySelector('#theme-button');
+const themeElements = document.querySelectorAll('.light-theme, .dark-theme');
 function rotateBusyCursor() {
 	busyCursorAngle = busyCursorCounter * 360 / busyCursorRotatePeriod;
 	busyCursor.style.background = `conic-gradient(from ${busyCursorAngle}deg, white, black)`;
@@ -15,8 +16,10 @@ function loaded() {
 }
 setTimeout(loaded, 3000);
 function changeTheme() {
-	themeButton.classList.toggle('light-theme');
-	themeButton.classList.toggle('dark-theme');
+	themeElements.forEach(function(themeElement) {
+		themeElement.classList.toggle('light-theme');
+		themeElement.classList.toggle('dark-theme');
+	});
 }
 themeButton.addEventListener('click', changeTheme);
 
