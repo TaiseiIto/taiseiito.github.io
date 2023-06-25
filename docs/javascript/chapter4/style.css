@@ -7,10 +7,7 @@ body {
   --body-height: 100vh;
   --header-footer-height: 5vh;
   --main-height: calc(var(--body-height) - 2 * var(--header-footer-height));
-  display: flex;
-  flex-direction: column;
-  height: var(--body-height);
-  justify-content: space-between;
+  position: relative;
 }
 body a {
   color: inherit;
@@ -19,7 +16,25 @@ body a {
 body a:hover {
   color: red;
 }
-body header, body footer {
+body > * {
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+}
+body #loading {
+  background: rgba(0, 0, 0, 0.5);
+  height: 100vh;
+  z-index: 1;
+}
+body #content {
+  display: flex;
+  flex-direction: column;
+  height: var(--body-height);
+  justify-content: space-between;
+  z-index: 0;
+}
+body #content header, body #content footer {
   align-items: center;
   background: black;
   color: white;
@@ -27,15 +42,18 @@ body header, body footer {
   justify-content: space-between;
   height: var(--header-footer-height);
 }
-body header address, body footer address {
+body #content header address, body #content footer address {
   display: flex;
   font-style: normal;
   justify-content: space-between;
   width: 40vw;
 }
-body header div, body footer div {
+body #content header div, body #content footer div {
   min-width: 20vw;
   text-align: center;
+}
+body #content main {
+  height: var(--main-height);
 }
 
 /*# sourceMappingURL=style.css.map */
