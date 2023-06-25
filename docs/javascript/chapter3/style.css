@@ -34,5 +34,18 @@ body > header div, body > footer div {
   min-width: 20vw;
   text-align: center;
 }
+body main {
+  background: black;
+  display: grid;
+  height: calc(90vh - 10px);
+  place-items: center;
+  text-align: center;
+}
+body main div {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+}
 
 /*# sourceMappingURL=style.css.map */
