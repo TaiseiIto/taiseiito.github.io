@@ -32,6 +32,7 @@ body {
   flex-direction: column;
   height: 100vh;
   justify-content: center;
+  transition: all 1s;
   z-index: 1;
   #busy-cursor {
    --radius: 10rem;

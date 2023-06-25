@@ -33,6 +33,7 @@ body #loading {
   flex-direction: column;
   height: 100vh;
   justify-content: center;
+  transition: all 1s;
   z-index: 1;
 }
 body #loading #busy-cursor {
