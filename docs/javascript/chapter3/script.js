@@ -1,7 +1,10 @@
-colorPicker = document.querySelector('#colorPicker');
-color = colorPicker.value;
-console.log(color);
-colorText = document.querySelector('#colorText');
-console.log(colorText);
-colorText.textContent = `カラーコード:${color}`;
+const colorPicker = document.querySelector('#colorPicker');
+const colorText = document.querySelector('#colorText');
+
+function changeColor() {
+	const color = colorPicker.value;
+	colorText.textContent = `カラーコード:${color}`;
+}
+
+colorPicker.addEventListener('input', changeColor);
 
