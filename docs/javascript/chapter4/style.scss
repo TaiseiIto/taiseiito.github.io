@@ -15,6 +15,10 @@ body {
    color: red;
   }
  }
+ .loaded {
+  opacity: 0;
+  visibility: hidden;
+ }
  >* {
   left: 0;
   position: absolute;
@@ -75,4 +79,3 @@ body {
   }
  }
 }
-

@@ -16,6 +16,10 @@ body a {
 body a:hover {
   color: red;
 }
+body .loaded {
+  opacity: 0;
+  visibility: hidden;
+}
 body > * {
   left: 0;
   position: absolute;
