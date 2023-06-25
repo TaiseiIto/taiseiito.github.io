@@ -6,15 +6,15 @@ const busyCursor = document.querySelector('#busy-cursor');
 let theme = 0;
 const themeButton = document.querySelector('#theme-button');
 const themeElements = document.querySelectorAll('.light-theme, .dark-theme');
-setInterval(function () {
+setInterval(function() {
 	busyCursorAngle = busyCursorCounter * 360 / busyCursorRotatePeriod;
 	busyCursor.style.background = `conic-gradient(from ${busyCursorAngle}deg, white, black)`;
 	busyCursorCounter = (busyCursorCounter + busyCursorFramePeriod) % busyCursorRotatePeriod;
 }, busyCursorFramePeriod);
-setTimeout(function loaded() {
+setTimeout(function() {
 	loading.classList.add('loaded');
 }, 3000);
-themeButton.addEventListener('click', function changeTheme() {
+themeButton.addEventListener('click', function() {
 	theme = (theme + 1) % 2;
 	themeElements.forEach(function(themeElement) {
 		themeElement.classList.toggle('light-theme');
