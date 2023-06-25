@@ -32,27 +32,9 @@ body {
   #busy-cursor {
    --radius: 10rem;
    --diameter: calc(2 * var(--radius));
-   animation: busy-cursor-animation 1s linear infinite;
    border-radius: var(--radius);
    height: var(--diameter);
    width: var(--diameter);
-   @keyframes busy-cursor-animation {
-    0% {
-   	background: conic-gradient(from 0deg, white, black);
-    }
-    25% {
-   	background: conic-gradient(from 90deg, white, black);
-    }
-    50% {
-   	background: conic-gradient(from 180deg, white, black);
-    }
-    75% {
-   	background: conic-gradient(from 270deg, white, black);
-    }
-    100% {
-   	background: conic-gradient(from 360deg, white, black);
-    }
-   }
   }
  }
  #content {
