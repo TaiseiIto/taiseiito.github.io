@@ -5,21 +5,32 @@ const loading = document.querySelector('#loading');
 const busyCursor = document.querySelector('#busy-cursor');
 const themeButton = document.querySelector('#theme-button');
 const themeElements = document.querySelectorAll('.light-theme, .dark-theme');
-function rotateBusyCursor() {
+setInterval(function () {
 	busyCursorAngle = busyCursorCounter * 360 / busyCursorRotatePeriod;
 	busyCursor.style.background = `conic-gradient(from ${busyCursorAngle}deg, white, black)`;
 	busyCursorCounter = (busyCursorCounter + busyCursorFramePeriod) % busyCursorRotatePeriod;
-}
-setInterval(rotateBusyCursor, busyCursorFramePeriod);
-function loaded() {
+}, busyCursorFramePeriod);
+setTimeout(function loaded() {
 	loading.classList.add('loaded');
-}
-setTimeout(loaded, 3000);
-function changeTheme() {
+}, 3000);
+themeButton.addEventListener('click', function changeTheme() {
 	themeElements.forEach(function(themeElement) {
 		themeElement.classList.toggle('light-theme');
 		themeElement.classList.toggle('dark-theme');
 	});
-}
-themeButton.addEventListener('click', changeTheme);
+	switch(themeButton.textContent) {
+	case 'ダークモードにする':
+		console.log('ダークモードにします');
+		themeButton.textContent = 'ライトモードにする';
+		break;
+	case 'ライトモードにする':
+		console.log('ライトモードにします');
+		themeButton.textContent = 'ダークモードにする';
+		break;
+	default:
+		console.log('何もしません');
+		break;
+	}
+	console.log(themeButton.textContent);
+});
 
