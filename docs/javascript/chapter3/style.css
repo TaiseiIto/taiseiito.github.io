@@ -4,9 +4,12 @@
 }
 
 body {
+  --body-height: 100vh;
+  --header-footer-height: 5vh;
+  --main-height: calc(var(--body-height) - 2 * var(--header-footer-height));
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: var(--body-height);
   justify-content: space-between;
 }
 body a {
@@ -22,7 +25,9 @@ body > header, body > footer {
   color: white;
   display: flex;
   justify-content: space-between;
-  min-height: 5vh;
+  height: var(--header-footer-height);
+  box-shadow: 0 0 4rem white;
+  z-index: 1;
 }
 body > header > address, body > footer > address {
   display: flex;
@@ -37,9 +42,10 @@ body > header div, body > footer div {
 body main {
   background: black;
   display: grid;
-  height: calc(90vh - 10px);
+  height: var(--main-height);
   place-items: center;
   text-align: center;
+  z-index: 0;
 }
 body main div {
   align-items: center;
