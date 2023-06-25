@@ -32,9 +32,18 @@ body {
   #busy-cursor {
    --radius: 10rem;
    --diameter: calc(2 * var(--radius));
+   align-items: center;
    border-radius: var(--radius);
+   display: flex;
    height: var(--diameter);
+   justify-content: center;
    width: var(--diameter);
+   #busy-cursor-hole {
+    background: white;
+    border-radius: 50%;
+    height: 70%;
+    width: 70%;
+   }
   }
  }
  #content {
