@@ -16,6 +16,14 @@ body a {
 body a:hover {
   color: red;
 }
+body .dark-theme {
+  background: black;
+  color: white;
+}
+body .light-theme {
+  background: white;
+  color: black;
+}
 body .loaded {
   opacity: 0;
   visibility: hidden;
@@ -61,8 +69,6 @@ body #content {
 }
 body #content header, body #content footer {
   align-items: center;
-  background: black;
-  color: white;
   display: flex;
   justify-content: space-between;
   height: var(--header-footer-height);
@@ -78,7 +84,16 @@ body #content header div, body #content footer div {
   text-align: center;
 }
 body #content main {
+  align-items: center;
+  display: flex;
   height: var(--main-height);
+  justify-content: center;
+}
+body #content main #theme-button {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 0;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */

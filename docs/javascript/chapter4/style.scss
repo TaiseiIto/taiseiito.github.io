@@ -15,6 +15,14 @@ body {
    color: red;
   }
  }
+ .dark-theme {
+  background: black;
+  color: white;
+ }
+ .light-theme {
+  background: white;
+  color: black;
+ }
  .loaded {
   opacity: 0;
   visibility: hidden;
@@ -59,8 +67,6 @@ body {
   z-index: 0;
   header, footer {
    align-items: center;
-   background: black;
-   color: white;
    display: flex;
    justify-content: space-between;
    height: var(--header-footer-height);
@@ -76,7 +82,16 @@ body {
    }
   }
   main {
+   align-items: center;
+   display: flex;
    height: var(--main-height);
+   justify-content: center;
+   #theme-button {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 0;
+    cursor: pointer;
+   }
   }
  }
 }
