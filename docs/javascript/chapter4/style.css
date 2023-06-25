@@ -23,9 +23,21 @@ body > * {
   width: 100vw;
 }
 body #loading {
-  background: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  background: rgba(255, 255, 255, 0.5);
+  display: flex;
+  flex-direction: column;
   height: 100vh;
+  justify-content: center;
   z-index: 1;
+}
+body #loading #busy-cursor {
+  --radius: 10rem;
+  --diameter: calc(2 * var(--radius));
+  background: conic-gradient(black, white);
+  border-radius: var(--radius);
+  height: var(--diameter);
+  width: var(--diameter);
 }
 body #content {
   display: flex;
