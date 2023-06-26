@@ -84,8 +84,15 @@ body {
   main {
    align-items: center;
    display: flex;
+   flex-direction: column;
    height: var(--main-height);
-   justify-content: center;
+   justify-content: space-evenly;
+   textarea {
+    font-size: 2em;
+    height: 16rem;
+    padding: 1rem;
+    width: 32rem;
+   }
    #theme-button {
     padding: 1rem;
     border-radius: 0.5rem;
