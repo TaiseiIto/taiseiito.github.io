@@ -96,11 +96,15 @@ body {
    .alert {
     color: red;
    }
-   #theme-button {
+   #submit-button, #theme-button {
     padding: 1rem;
     border-radius: 0.5rem;
     border: 0;
     cursor: pointer;
+    &:disabled {
+     background: #808080;
+     color: #606060;
+    }
    }
   }
  }

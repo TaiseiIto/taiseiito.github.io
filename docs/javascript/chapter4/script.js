@@ -45,3 +45,9 @@ textBox.addEventListener('keyup', function() {
 	}
 });
 
+const check = document.querySelector('#check');
+const submitButton = document.querySelector('#submit-button');
+check.addEventListener('change', function() {
+	submitButton.disabled = !check.checked;
+});
+

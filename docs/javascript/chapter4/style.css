@@ -99,11 +99,15 @@ body #content main textarea {
 body #content main .alert {
   color: red;
 }
-body #content main #theme-button {
+body #content main #submit-button, body #content main #theme-button {
   padding: 1rem;
   border-radius: 0.5rem;
   border: 0;
   cursor: pointer;
+}
+body #content main #submit-button:disabled, body #content main #theme-button:disabled {
+  background: #808080;
+  color: #606060;
 }
 
 /*# sourceMappingURL=style.css.map */
