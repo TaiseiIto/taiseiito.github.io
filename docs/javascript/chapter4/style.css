@@ -96,6 +96,9 @@ body #content main textarea {
   padding: 1rem;
   width: 32rem;
 }
+body #content main .alert {
+  color: red;
+}
 body #content main #theme-button {
   padding: 1rem;
   border-radius: 0.5rem;

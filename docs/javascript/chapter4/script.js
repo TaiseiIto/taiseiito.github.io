@@ -34,6 +34,14 @@ themeButton.addEventListener('click', function() {
 const textBox = document.querySelector('#text-box');
 const textCounter = document.querySelector('#text-counter');
 textBox.addEventListener('keyup', function() {
-	textCounter.textContent = textBox.value.length;
+	let length = textBox.value.length;
+	textCounter.textContent = length;
+	if(100 < length) {
+		textBox.classList.add('alert');
+		textCounter.classList.add('alert');
+	} else {
+		textBox.classList.remove('alert');
+		textCounter.classList.remove('alert');
+	}
 });
 
