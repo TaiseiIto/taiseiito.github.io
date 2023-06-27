@@ -51,3 +51,14 @@ check.addEventListener('change', function() {
 	submitButton.disabled = !check.checked;
 });
 
+const main = document.querySelector('main');
+const bar = document.querySelector('#bar');
+main.addEventListener('scroll', function() {
+	scroll = main.scrollTop;
+	overallHeight = main.scrollHeight;
+	visibleHeight = main.clientHeight;
+	scrollPercentage = 100 * scroll / (overallHeight - visibleHeight);
+	bar.style.width = `${scrollPercentage}%`;
+
+});
+

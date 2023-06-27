@@ -6,7 +6,9 @@
 body {
   --body-height: 100vh;
   --header-footer-height: 5vh;
-  --main-height: calc(var(--body-height) - 2 * var(--header-footer-height));
+  --bar-height: 1vh;
+  --main-height: calc(var(--body-height) - 2 * var(--header-footer-height) - var(--bar-height));
+  background: black;
   position: relative;
 }
 body a {
@@ -83,18 +85,26 @@ body #content header div, body #content footer div {
   min-width: 20vw;
   text-align: center;
 }
+body #content #bar {
+  background: red;
+  height: var(--bar-height);
+  width: 0;
+}
 body #content main {
-  align-items: center;
+  align-items: start;
   display: flex;
   flex-direction: column;
   height: var(--main-height);
-  justify-content: space-evenly;
+  overflow: auto;
+}
+body #content main > * {
+  margin: 1rem;
 }
 body #content main textarea {
   font-size: 2em;
-  height: 16rem;
+  min-height: 16rem;
   padding: 1rem;
-  width: 32rem;
+  min-width: 32rem;
 }
 body #content main .alert {
   color: red;
@@ -108,6 +118,10 @@ body #content main #submit-button, body #content main #theme-button {
 body #content main #submit-button:disabled, body #content main #theme-button:disabled {
   background: #808080;
   color: #606060;
+}
+body #content main #long-element {
+  background: repeating-linear-gradient(white 0rem, black 10rem, white 20rem);
+  min-height: 100vh;
 }
 
 /*# sourceMappingURL=style.css.map */

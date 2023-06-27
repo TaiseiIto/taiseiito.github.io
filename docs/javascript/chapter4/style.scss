@@ -6,7 +6,9 @@
 body {
  --body-height: 100vh;
  --header-footer-height: 5vh;
- --main-height: calc(var(--body-height) - 2 * var(--header-footer-height));
+ --bar-height: 1vh;
+ --main-height: calc(var(--body-height) - 2 * var(--header-footer-height) - var(--bar-height));
+ background: black;
  position: relative;
  a {
   color: inherit;
@@ -81,17 +83,25 @@ body {
     text-align: center;
    }
   }
+  #bar {
+   background: red;
+   height: var(--bar-height);
+   width: 0;
+  }
   main {
-   align-items: center;
+   align-items: start;
    display: flex;
    flex-direction: column;
    height: var(--main-height);
-   justify-content: space-evenly;
+   overflow: auto;
+   >* {
+    margin: 1rem;
+   }
    textarea {
     font-size: 2em;
-    height: 16rem;
+    min-height: 16rem;
     padding: 1rem;
-    width: 32rem;
+    min-width: 32rem;
    }
    .alert {
     color: red;
@@ -105,6 +115,10 @@ body {
      background: #808080;
      color: #606060;
     }
+   }
+   #long-element {
+    background: repeating-linear-gradient(white 0rem, black 10rem, white 20rem,);
+    min-height: 100vh;
    }
   }
  }
