@@ -6,6 +6,7 @@
 body {
  --body-height: 100vh;
  --header-footer-height: 5vh;
+ --main-height: calc(var(--body-height) - 2 * var(--header-footer-height));
  display: flex;
  flex-direction: column;
  height: var(--body-height);
@@ -31,6 +32,28 @@ body {
    margin: {
     left: 5rem;
     right: 5rem;
+   }
+  }
+ }
+ main {
+  --columns: 4;
+  --rows: 4;
+  display: grid;
+  grid-template-columns: repeat(var(--columns), calc(100% / var(--columns)));
+  height: var(--main-height);
+  overflow: auto;
+  section {
+   display: flex;
+   align-items: center;
+   position: relative;
+   h2 {
+    position: absolute;
+    z-index: 1;
+   }
+   img {
+    position: absolute;
+    width: 100%;
+    z-index: 0;
    }
   }
  }
