@@ -43,12 +43,14 @@ body main {
   overflow: auto;
 }
 body main section {
-  display: flex;
   align-items: center;
+  display: flex;
   position: relative;
 }
 body main section h2 {
   position: absolute;
+  text-align: center;
+  width: 100%;
   z-index: 1;
 }
 body main section img {

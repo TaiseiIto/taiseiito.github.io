@@ -43,11 +43,13 @@ body {
   height: var(--main-height);
   overflow: auto;
   section {
-   display: flex;
    align-items: center;
+   display: flex;
    position: relative;
    h2 {
     position: absolute;
+    text-align: center;
+    width: 100%;
     z-index: 1;
    }
    img {
