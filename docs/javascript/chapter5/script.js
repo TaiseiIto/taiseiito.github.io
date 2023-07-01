@@ -1,23 +1,24 @@
 const main = document.querySelector('main');
 
 function range(end) {
-	let count = 0;
 	return {
-		next: function() {
-			if(count < end) {
-				return {
-					value: count++,
-					done: false
-				};
-			} else {
-				return {
-					value: count,
-					done: true
-				};
-			}
-		},
 		[Symbol.iterator]: function() {
-			return this;
+			let count = 0;
+			return {
+				next: function() {
+					if(count < end) {
+						return {
+							value: count++,
+							done: false
+						};
+					} else {
+						return {
+							value: count,
+							done: true
+						};
+					}
+				},
+			};
 		}
 	};
 }
