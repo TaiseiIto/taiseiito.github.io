@@ -19,13 +19,18 @@ function range(end) {
 					}
 				},
 			};
-		}
+		},
+		forEach: function(callback) {
+			for(index of this) {
+				callback(index)
+			}
+		},
 	};
 }
 
-for(index of range(10)) {
+range(10).forEach(function(index) {
 	console.log(index);
-}
+});
 
 function imageSection(imageNumber) {
 	section = document.createElement('section');
