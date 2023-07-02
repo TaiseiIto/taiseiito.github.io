@@ -4,6 +4,9 @@
 }
 
 body {
+  --body-height: 100vh;
+  --header-footer-height: 5vh;
+  --main-height: calc(var(--body-height) - 2 * var(--header-footer-height));
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -21,6 +24,7 @@ body > header, body > footer {
   background: black;
   color: white;
   display: flex;
+  height: var(--header-footer-height);
   justify-content: space-between;
   min-height: 5vh;
 }
@@ -35,6 +39,7 @@ body > header div, body > footer div {
   text-align: center;
 }
 body main > ul {
+  height: var(--main-height);
   margin-left: 50px;
 }
 

@@ -22,8 +22,8 @@ body {
   align-items: center;
   background: black;
   color: white;
-  height: var(--header-footer-height);
   display: flex;
+  height: var(--header-footer-height);
   justify-content: space-around;
   address {
    display: flex;
@@ -35,6 +35,9 @@ body {
     right: 5rem;
    }
   }
+ }
+ main {
+  height: var(--main-height);
  }
 }
 

@@ -35,5 +35,8 @@ body header div, body footer div {
   margin-left: 5rem;
   margin-right: 5rem;
 }
+body main {
+  height: var(--main-height);
+}
 
 /*# sourceMappingURL=style.css.map */
