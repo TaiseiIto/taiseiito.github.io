@@ -39,5 +39,15 @@ body {
  main {
   height: var(--main-height);
  }
+ #loading {
+  background: gray;
+  position: fixed;
+  inset: 0;
+ }
+ #curtain {
+  background: red;
+  position: fixed;
+  inset: 0;
+ }
 }
 

@@ -38,5 +38,15 @@ body header div, body footer div {
 body main {
   height: var(--main-height);
 }
+body #loading {
+  background: gray;
+  position: fixed;
+  inset: 0;
+}
+body #curtain {
+  background: red;
+  position: fixed;
+  inset: 0;
+}
 
 /*# sourceMappingURL=style.css.map */
