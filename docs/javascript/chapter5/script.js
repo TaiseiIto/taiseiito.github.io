@@ -36,6 +36,19 @@ function imageSection(imageNumber) {
  image = document.createElement('img');
  image.src = '../../images/myhead.jpg';
  image.alt = 'my head';
+ image.animate({
+  opacity: [0, 1],
+  rotate: ['360deg', '0deg'],
+  scale: [0, 1],
+  translate: ['0 100%', '0 0'],
+ }, {
+  delay: imageNumber * 100,
+  direction: 'alternate',
+  duration: 1000,
+  easing: 'ease-in-out',
+  fill: 'both',
+  iterations: Infinity,
+ });
  image.onload = function() {
   scale = image.width / image.naturalWidth;
   height = scale * image.naturalHeight;

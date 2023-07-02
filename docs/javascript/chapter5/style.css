@@ -42,7 +42,8 @@ body main {
   grid-template-columns: repeat(var(--columns), calc(100% / var(--columns)));
   height: var(--main-height);
   justify-content: center;
-  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 body main section {
   align-items: center;
