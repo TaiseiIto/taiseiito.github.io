@@ -48,6 +48,7 @@ function imageSection(imageNumber) {
    rotate: ['360deg', '0deg'],
    scale: [0, 1],
   }, {
+   delay: (imageNumber % 4) * 200,
    duration: 1000,
    easing: 'ease-in-out',
    fill: 'both',
