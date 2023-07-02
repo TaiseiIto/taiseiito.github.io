@@ -38,10 +38,8 @@ body {
  main {
   --columns: 4;
   --rows: 4;
-  --image-size: calc(90vw / var(--columns));
   display: grid;
-  grid-template-columns: repeat(var(--columns), var(--image-size));
-  grid-template-rows: repeat(var(--rows), var(--image-size));
+  grid-template-columns: repeat(var(--columns), calc(100% / var(--columns)));
   height: var(--main-height);
   justify-content: center;
   overflow: auto;

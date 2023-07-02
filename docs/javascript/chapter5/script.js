@@ -36,6 +36,11 @@ function imageSection(imageNumber) {
  image = document.createElement('img');
  image.src = '../../images/myhead.jpg';
  image.alt = 'my head';
+ image.onload = function() {
+  scale = image.width / image.naturalWidth;
+  height = scale * image.naturalHeight;
+  main.style.gridTemplateRows = `repeat(var(--rows), ${height}px)`;
+ };
  section.appendChild(image);
  return section;
 }
