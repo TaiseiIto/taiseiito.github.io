@@ -20,6 +20,7 @@ body a:hover {
   color: red;
 }
 body header, body footer {
+  align-items: center;
   background: black;
   color: white;
   height: var(--header-footer-height);
