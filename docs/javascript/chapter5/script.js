@@ -40,7 +40,6 @@ function imageSection(imageNumber) {
   opacity: [0, 1],
   rotate: ['360deg', '0deg'],
   scale: [0, 1],
-  translate: ['0 100%', '0 0'],
  }, {
   delay: imageNumber * 100,
   direction: 'alternate',
@@ -55,6 +54,9 @@ function imageSection(imageNumber) {
   main.style.gridTemplateRows = `repeat(var(--rows), ${height}px)`;
  };
  section.appendChild(image);
+ new IntersectionObserver(function() {
+  console.log(`画像${imageNumber}が表示されました`);
+ }).observe(section);
  return section;
 }
 
