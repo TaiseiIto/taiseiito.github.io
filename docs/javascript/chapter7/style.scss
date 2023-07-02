@@ -40,14 +40,22 @@ body {
   height: var(--main-height);
  }
  #loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: gray;
   position: fixed;
   inset: 0;
- }
- #curtain {
-  background: red;
-  position: fixed;
-  inset: 0;
+  p {
+   z-index: 1;
+   font-size: 400%;
+  }
+  #curtain {
+   background: red;
+   position: fixed;
+   inset: 0;
+   z-index: 0;
+  }
  }
 }
 

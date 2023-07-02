@@ -39,14 +39,22 @@ body main {
   height: var(--main-height);
 }
 body #loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: gray;
   position: fixed;
   inset: 0;
 }
-body #curtain {
+body #loading p {
+  z-index: 1;
+  font-size: 400%;
+}
+body #loading #curtain {
   background: red;
   position: fixed;
   inset: 0;
+  z-index: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
