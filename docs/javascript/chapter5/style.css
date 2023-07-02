@@ -37,9 +37,12 @@ body header div, body footer div {
 body main {
   --columns: 4;
   --rows: 4;
+  --image-size: calc(90vw / var(--columns));
   display: grid;
-  grid-template-columns: repeat(var(--columns), calc(100% / var(--columns)));
+  grid-template-columns: repeat(var(--columns), var(--image-size));
+  grid-template-rows: repeat(var(--rows), var(--image-size));
   height: var(--main-height);
+  justify-content: center;
   overflow: auto;
 }
 body main section {
@@ -54,6 +57,7 @@ body main section h2 {
   z-index: 1;
 }
 body main section img {
+  height: 100%;
   position: absolute;
   width: 100%;
   z-index: 0;
