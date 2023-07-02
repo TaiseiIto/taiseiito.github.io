@@ -36,26 +36,22 @@ function imageSection(imageNumber) {
  image = document.createElement('img');
  image.src = '../../images/myhead.jpg';
  image.alt = 'my head';
- image.animate({
-  opacity: [0, 1],
-  rotate: ['360deg', '0deg'],
-  scale: [0, 1],
- }, {
-  delay: imageNumber * 100,
-  direction: 'alternate',
-  duration: 1000,
-  easing: 'ease-in-out',
-  fill: 'both',
-  iterations: Infinity,
- });
  image.onload = function() {
   scale = image.width / image.naturalWidth;
   height = scale * image.naturalHeight;
   main.style.gridTemplateRows = `repeat(var(--rows), ${height}px)`;
  };
  section.appendChild(image);
- new IntersectionObserver(function() {
-  console.log(`画像${imageNumber}が表示されました`);
+ new IntersectionObserver(function(entries) {
+  entries[0].target.animate({
+   opacity: [0, 1],
+   rotate: ['360deg', '0deg'],
+   scale: [0, 1],
+  }, {
+   duration: 1000,
+   easing: 'ease-in-out',
+   fill: 'both',
+  });
  }).observe(section);
  return section;
 }
