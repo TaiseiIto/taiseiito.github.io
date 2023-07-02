@@ -22,7 +22,7 @@ function range(end) {
   },
   forEach: function(callback) {
    for(index of this) {
-    callback(index)
+    callback(index);
    }
   },
  };
@@ -37,7 +37,7 @@ function imageSection(imageNumber) {
  image.src = '../../images/myhead.jpg';
  image.alt = 'my head';
  section.appendChild(image);
- return section
+ return section;
 }
 
 range(16).forEach(function(index) {
