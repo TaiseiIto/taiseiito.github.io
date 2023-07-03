@@ -96,6 +96,15 @@ body main #gallery #gallery-images ul {
 body main #gallery #gallery-images ul img {
   width: 100%;
 }
+body main #gallery #gallery-main-image {
+  display: flex;
+  justify-content: space-evenly;
+}
+body main #gallery #gallery-main-image img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
 body #loading {
   display: flex;
   align-items: center;

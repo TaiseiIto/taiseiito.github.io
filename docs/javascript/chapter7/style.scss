@@ -95,6 +95,15 @@ body {
      }
     }
    }
+   #gallery-main-image {
+    display: flex;
+    justify-content: space-evenly;
+    img {
+     max-height: 100%;
+     max-width: 100%;
+     object-fit: contain;
+    }
+   }
   }
  }
  #loading {
