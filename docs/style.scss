@@ -4,9 +4,12 @@
  padding: 0;
 }
 body {
+ --body-height: 100vh;
+ --header-footer-height: 5vh;
+ --main-height: calc(var(--vody-height) - 2 * var(--header-footer-height));
  display: flex;
  flex-direction: column;
- height: 100vh;
+ height: var(--body-height);
  justify-content: space-between;
  a {
   color: inherit;
@@ -20,8 +23,8 @@ body {
   background: black;
   color: white;
   display: flex;
+  height: var(--header-footer-height);
   justify-content: space-between;
-  min-height: 5vh;
   >address {
    display: flex;
    font-style: normal;
@@ -33,9 +36,13 @@ body {
    text-align: center;
   }
  }
- main>ul {
-  margin: {
-   left: 50px;
+ main {
+  height: var(--body-height);
+  ul {
+   margin: {
+    left: 50px;
+   }
   }
  }
 }
+
