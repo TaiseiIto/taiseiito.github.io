@@ -19,6 +19,9 @@ body a {
 body a:hover {
   color: red;
 }
+body img {
+  vertical-align: middle;
+}
 body header, body footer {
   align-items: center;
   background: black;
@@ -37,12 +40,38 @@ body header div, body footer div {
 }
 body main {
   height: var(--main-height);
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+body main section {
+  height: var(--main-height);
+}
+body main #gallery {
+  display: flex;
+}
+body main #gallery div {
+  text-align: center;
+  width: 50%;
+}
+body main #gallery #gallery-images {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+body main #gallery #gallery-images ul {
+  --columns: 3;
+  display: grid;
+  grid-template-columns: repeat(var(--columns), calc(100% / var(--columns)));
+  list-style: none;
+}
+body main #gallery #gallery-images ul img {
+  width: 100%;
 }
 body #loading {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: gray;
+  background: white;
   position: fixed;
   inset: 0;
 }

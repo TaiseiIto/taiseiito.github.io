@@ -18,6 +18,9 @@ body {
    color: red;
   }
  }
+ img {
+  vertical-align: middle;
+ }
  header, footer {
   align-items: center;
   background: black;
@@ -38,12 +41,38 @@ body {
  }
  main {
   height: var(--main-height);
+  overflow-x: hidden;
+  overflow-y: scroll;
+  section {
+   height: var(--main-height);
+  }
+  #gallery {
+   display: flex;
+   div {
+    text-align: center;
+    width: 50%;
+   }
+   #gallery-images {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    ul {
+     --columns: 3;
+     display: grid;
+     grid-template-columns: repeat(var(--columns), calc(100% / var(--columns)));
+     list-style: none;
+     img {
+      width: 100%;
+     }
+    }
+   }
+  }
  }
  #loading {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: gray;
+  background: white;
   position: fixed;
   inset: 0;
   p {
