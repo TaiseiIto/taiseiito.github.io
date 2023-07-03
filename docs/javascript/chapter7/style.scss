@@ -20,6 +20,8 @@ body {
  }
  img {
   vertical-align: middle;
+  position: relative;
+  z-index: -1;
  }
  header, footer {
   align-items: center;
@@ -51,6 +53,33 @@ body {
    div {
     text-align: center;
     width: 50%;
+   }
+   img.blur {
+    filter: blur(10px);
+   }
+   img.brightness {
+    filter: brightness(200%);
+   }
+   img.contrast {
+    filter: contrast(200%);
+   }
+   img.drop-shadow {
+    filter: drop-shadow(5px 5px 5px #ff0000);
+   }
+   img.grayscale {
+    filter: grayscale(100%);
+   }
+   img.hue-rotate {
+    filter: hue-rotate(30deg);
+   }
+   img.invert {
+    filter: invert(100%);
+   }
+   img.opacity {
+    filter: opacity(50%);
+   }
+   img.saturate {
+    filter: saturate(200%);
    }
    #gallery-images {
     display: flex;

@@ -21,6 +21,8 @@ body a:hover {
 }
 body img {
   vertical-align: middle;
+  position: relative;
+  z-index: -1;
 }
 body header, body footer {
   align-items: center;
@@ -52,6 +54,33 @@ body main #gallery {
 body main #gallery div {
   text-align: center;
   width: 50%;
+}
+body main #gallery img.blur {
+  filter: blur(10px);
+}
+body main #gallery img.brightness {
+  filter: brightness(200%);
+}
+body main #gallery img.contrast {
+  filter: contrast(200%);
+}
+body main #gallery img.drop-shadow {
+  filter: drop-shadow(5px 5px 5px #ff0000);
+}
+body main #gallery img.grayscale {
+  filter: grayscale(100%);
+}
+body main #gallery img.hue-rotate {
+  filter: hue-rotate(30deg);
+}
+body main #gallery img.invert {
+  filter: invert(100%);
+}
+body main #gallery img.opacity {
+  filter: opacity(50%);
+}
+body main #gallery img.saturate {
+  filter: saturate(200%);
 }
 body main #gallery #gallery-images {
   display: flex;
