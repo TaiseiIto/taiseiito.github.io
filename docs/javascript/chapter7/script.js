@@ -17,17 +17,10 @@ window.addEventListener('load', function() {
   easing: 'ease-in-out',
   fill: 'forwards',
  });
- setTimeout(function() {
-  for(image of images) {
-   image.style.zIndex = 2;
-  }
- }, 2000);
 });
 
 const galleryImages = document.getElementById('gallery-images').getElementsByTagName('img');
-console.log(galleryImages);
 const galleryMainImage = document.getElementById('gallery-main-image').getElementsByTagName('img')[0];
-console.log(galleryMainImage);
 
 for(galleryImage of galleryImages) {
  let image = galleryImage;

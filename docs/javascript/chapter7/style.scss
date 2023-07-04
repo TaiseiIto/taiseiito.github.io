@@ -21,7 +21,6 @@ body {
  img {
   vertical-align: middle;
   position: relative;
-  z-index: -1;
  }
  header, footer {
   align-items: center;
@@ -30,9 +29,19 @@ body {
   display: flex;
   height: var(--header-footer-height);
   justify-content: space-around;
+  z-index: 0;
   address {
    display: flex;
    font-style: normal;
+  }
+  button {
+   background: inherit;
+   color: inherit;
+   border: none;
+   &:hover {
+    color: red;
+    cursor: pointer;
+   }
   }
   div {
    margin: {
@@ -41,10 +50,39 @@ body {
    }
   }
  }
+ nav {
+  --border-thickness: 1px;
+  background: black;
+  border: {
+   top: var(--border-thickness) solid white;
+   bottom: var(--border-thickness) solid white;
+   left: none;
+   right: none;
+  }
+  color: white;
+  height: calc(var(--main-height) - 2 * var(--border-thickness));
+  position: fixed;
+  right: 0;
+  top: var(--header-footer-height);
+  width: 16rem;
+  z-index: 1;
+  ul {
+   list-style: none;
+   margin: 2rem;
+   li {
+    margin: 1rem;
+    &:hover {
+     color: red;
+     cursor: pointer;
+    }
+   }
+  }
+ }
  main {
   height: var(--main-height);
   overflow-x: hidden;
   overflow-y: scroll;
+  z-index: 0;
   section {
    height: var(--main-height);
   }
@@ -107,21 +145,20 @@ body {
   }
  }
  #loading {
-  display: flex;
   align-items: center;
-  justify-content: center;
   background: white;
-  position: fixed;
+  display: flex;
   inset: 0;
+  justify-content: center;
+  position: fixed;
+  z-index: 1;
   p {
-   z-index: 1;
    font-size: 400%;
   }
   #curtain {
    background: red;
    position: fixed;
    inset: 0;
-   z-index: 0;
   }
  }
 }

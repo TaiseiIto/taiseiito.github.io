@@ -22,7 +22,6 @@ body a:hover {
 body img {
   vertical-align: middle;
   position: relative;
-  z-index: -1;
 }
 body header, body footer {
   align-items: center;
@@ -31,19 +30,56 @@ body header, body footer {
   display: flex;
   height: var(--header-footer-height);
   justify-content: space-around;
+  z-index: 0;
 }
 body header address, body footer address {
   display: flex;
   font-style: normal;
 }
+body header button, body footer button {
+  background: inherit;
+  color: inherit;
+  border: none;
+}
+body header button:hover, body footer button:hover {
+  color: red;
+  cursor: pointer;
+}
 body header div, body footer div {
   margin-left: 5rem;
   margin-right: 5rem;
+}
+body nav {
+  --border-thickness: 1px;
+  background: black;
+  border-top: var(--border-thickness) solid white;
+  border-bottom: var(--border-thickness) solid white;
+  border-left: none;
+  border-right: none;
+  color: white;
+  height: calc(var(--main-height) - 2 * var(--border-thickness));
+  position: fixed;
+  right: 0;
+  top: var(--header-footer-height);
+  width: 16rem;
+  z-index: 1;
+}
+body nav ul {
+  list-style: none;
+  margin: 2rem;
+}
+body nav ul li {
+  margin: 1rem;
+}
+body nav ul li:hover {
+  color: red;
+  cursor: pointer;
 }
 body main {
   height: var(--main-height);
   overflow-x: hidden;
   overflow-y: scroll;
+  z-index: 0;
 }
 body main section {
   height: var(--main-height);
@@ -106,22 +142,21 @@ body main #gallery #gallery-main-image img {
   object-fit: contain;
 }
 body #loading {
-  display: flex;
   align-items: center;
-  justify-content: center;
   background: white;
-  position: fixed;
+  display: flex;
   inset: 0;
+  justify-content: center;
+  position: fixed;
+  z-index: 1;
 }
 body #loading p {
-  z-index: 1;
   font-size: 400%;
 }
 body #loading #curtain {
   background: red;
   position: fixed;
   inset: 0;
-  z-index: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
