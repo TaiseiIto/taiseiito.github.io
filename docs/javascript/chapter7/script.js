@@ -30,9 +30,9 @@ const galleryMainImage = document.getElementById('gallery-main-image').getElemen
 console.log(galleryMainImage);
 
 for(galleryImage of galleryImages) {
- galleryImage.addEventListener('mouseover', function() {
-  console.log(`galleryMainImage.className = ${galleryMainImage.className}`);
-  console.log(`galleryImage.className = ${galleryImage.className}`);
+ let image = galleryImage;
+ image.addEventListener('mouseover', function() {
+  galleryMainImage.className = image.className
  });
 }
 
