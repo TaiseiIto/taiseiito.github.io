@@ -31,7 +31,8 @@ console.log(galleryMainImage);
 
 for(galleryImage of galleryImages) {
  galleryImage.addEventListener('mouseover', function() {
-  console.log('galleryImageにマウスカーソルが重なりました');
+  console.log(`galleryMainImage.className = ${galleryMainImage.className}`);
+  console.log(`galleryImage.className = ${galleryImage.className}`);
  });
 }
 
