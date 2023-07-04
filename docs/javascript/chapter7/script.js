@@ -32,7 +32,21 @@ console.log(galleryMainImage);
 for(galleryImage of galleryImages) {
  let image = galleryImage;
  image.addEventListener('mouseover', function() {
-  galleryMainImage.className = image.className
+  const duration = 300;
+  galleryMainImage.animate({
+   opacity: [1, 0],
+  }, {
+   duration: duration,
+  });
+  setTimeout(function() {
+   galleryMainImage.className = image.className
+  }, duration);
+  galleryMainImage.animate({
+   opacity: [0, 1],
+  }, {
+   delay: duration,
+   duration: duration,
+  });
  });
 }
 
