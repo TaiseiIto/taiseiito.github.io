@@ -45,14 +45,28 @@ for(galleryImage of galleryImages) {
 
 const menu = document.getElementsByTagName('nav')[0];
 const menuButton = document.getElementById('menu-button');
+let menuIsOpened = false;
 menuButton.addEventListener('click', function() {
- console.log(menu);
- menu.animate({
-  transform: ['translate(100%)', 'translate(0)'],
- }, {
-  duration: 1000,
-  easing: 'ease-in-out',
-  fill: 'forwards',
- });
+ if(menuIsOpened) {
+  menu.animate({
+   transform: ['translate(0%)', 'translate(100%)'],
+  }, {
+   duration: 1000,
+   easing: 'ease-in-out',
+   fill: 'forwards',
+  });
+  menuButton.textContent = 'メニューを閉じる';
+  menuIsOpened = false;
+ } else {
+  menu.animate({
+   transform: ['translate(100%)', 'translate(0)'],
+  }, {
+   duration: 1000,
+   easing: 'ease-in-out',
+   fill: 'forwards',
+  });
+  menuButton.textContent = 'メニューを開く';
+  menuIsOpened = true;
+ }
 });
 
