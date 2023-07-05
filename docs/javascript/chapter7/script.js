@@ -92,7 +92,7 @@ Array.from(galleryImages).forEach(function(galleryImage) {
  });
 });
 
-const fadeObserver = new IntersectionObserver(function(fades) {
+const fadeObserver = new IntersectionObserver(function(fades, fadeObserver) {
  fades.forEach(function(fade) {
   if(fade.isIntersecting) {
    fade.target.animate({
@@ -102,8 +102,9 @@ const fadeObserver = new IntersectionObserver(function(fades) {
    }, {
     duration: 500,
     easing: 'ease-in-out',
-    fill: 'forwards',
+    fill: 'both',
    });
+   fadeObserver.unobserve(fade.target);
   }
  });
 });
