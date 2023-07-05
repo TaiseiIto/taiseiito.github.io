@@ -88,7 +88,13 @@ body {
   section {
    height: var(--main-height);
   }
-  #gallery {
+  section#fadein {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   text-align: center;
+  }
+  section#gallery {
    display: flex;
    div {
     text-align: center;

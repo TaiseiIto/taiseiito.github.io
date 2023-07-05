@@ -86,59 +86,65 @@ body main {
 body main section {
   height: var(--main-height);
 }
-body main #gallery {
+body main section#fadein {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+}
+body main section#gallery {
   display: flex;
 }
-body main #gallery div {
+body main section#gallery div {
   text-align: center;
   width: 50%;
 }
-body main #gallery img.blur {
+body main section#gallery img.blur {
   filter: blur(10px);
 }
-body main #gallery img.brightness {
+body main section#gallery img.brightness {
   filter: brightness(200%);
 }
-body main #gallery img.contrast {
+body main section#gallery img.contrast {
   filter: contrast(200%);
 }
-body main #gallery img.drop-shadow {
+body main section#gallery img.drop-shadow {
   filter: drop-shadow(5px 5px 5px #ff0000);
 }
-body main #gallery img.grayscale {
+body main section#gallery img.grayscale {
   filter: grayscale(100%);
 }
-body main #gallery img.hue-rotate {
+body main section#gallery img.hue-rotate {
   filter: hue-rotate(30deg);
 }
-body main #gallery img.invert {
+body main section#gallery img.invert {
   filter: invert(100%);
 }
-body main #gallery img.opacity {
+body main section#gallery img.opacity {
   filter: opacity(50%);
 }
-body main #gallery img.saturate {
+body main section#gallery img.saturate {
   filter: saturate(200%);
 }
-body main #gallery #gallery-images {
+body main section#gallery #gallery-images {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
-body main #gallery #gallery-images ul {
+body main section#gallery #gallery-images ul {
   --columns: 3;
   display: grid;
   grid-template-columns: repeat(var(--columns), calc(100% / var(--columns)));
   list-style: none;
 }
-body main #gallery #gallery-images ul img {
+body main section#gallery #gallery-images ul img {
   width: 100%;
 }
-body main #gallery #gallery-main-image {
+body main section#gallery #gallery-main-image {
   display: flex;
   justify-content: space-evenly;
 }
-body main #gallery #gallery-main-image img {
+body main section#gallery #gallery-main-image img {
   max-height: 100%;
   max-width: 100%;
   object-fit: contain;

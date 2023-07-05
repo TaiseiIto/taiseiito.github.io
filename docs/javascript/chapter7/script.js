@@ -1,6 +1,5 @@
 const loading = document.getElementById('loading');
 const curtain = document.getElementById('curtain');
-const images = document.getElementsByTagName('img');
 window.addEventListener('load', function() {
  loading.animate({
   opacity: [1, 0],
@@ -16,30 +15,6 @@ window.addEventListener('load', function() {
   duration: 2000,
   easing: 'ease-in-out',
   fill: 'forwards',
- });
-});
-
-const galleryImages = document.getElementById('gallery-images').getElementsByTagName('img');
-const galleryMainImage = document.getElementById('gallery-main-image').getElementsByTagName('img')[0];
-
-Array.from(galleryImages).forEach(function(galleryImage) {
- let image = galleryImage;
- image.addEventListener('mouseover', function() {
-  const duration = 300;
-  galleryMainImage.animate({
-   opacity: [1, 0],
-  }, {
-   duration: duration,
-  });
-  setTimeout(function() {
-   galleryMainImage.className = image.className
-  }, duration);
-  galleryMainImage.animate({
-   opacity: [0, 1],
-  }, {
-   delay: duration,
-   duration: duration,
-  });
  });
 });
 
@@ -91,5 +66,48 @@ menuButton.addEventListener('click', function() {
   menuButton.textContent = 'メニューを閉じる';
   menuIsOpened = true;
  }
+});
+
+const galleryImages = document.getElementById('gallery-images').getElementsByTagName('img');
+const galleryMainImage = document.getElementById('gallery-main-image').getElementsByTagName('img')[0];
+
+Array.from(galleryImages).forEach(function(galleryImage) {
+ let image = galleryImage;
+ image.addEventListener('mouseover', function() {
+  const duration = 300;
+  galleryMainImage.animate({
+   opacity: [1, 0],
+  }, {
+   duration: duration,
+  });
+  setTimeout(function() {
+   galleryMainImage.className = image.className
+  }, duration);
+  galleryMainImage.animate({
+   opacity: [0, 1],
+  }, {
+   delay: duration,
+   duration: duration,
+  });
+ });
+});
+
+const fadeObserver = new IntersectionObserver(function(fades) {
+ fades.forEach(function(fade) {
+  if(fade.isIntersecting) {
+   fade.target.animate({
+    opacity: [0, 1],
+    filter: ['blur(3rem)', 'none'],
+    transform: ['translate(0, 3rem)', 'translate(0, 0)'],
+   }, {
+    duration: 500,
+    easing: 'ease-in-out',
+    fill: 'forwards',
+   });
+  }
+ });
+});
+Array.from(document.getElementById('fadein').children).forEach(function(fadeElement) {
+ fadeObserver.observe(fadeElement);
 });
 
