@@ -22,7 +22,7 @@ window.addEventListener('load', function() {
 const galleryImages = document.getElementById('gallery-images').getElementsByTagName('img');
 const galleryMainImage = document.getElementById('gallery-main-image').getElementsByTagName('img')[0];
 
-for(galleryImage of galleryImages) {
+Array.from(galleryImages).forEach(function(galleryImage) {
  let image = galleryImage;
  image.addEventListener('mouseover', function() {
   const duration = 300;
@@ -41,9 +41,10 @@ for(galleryImage of galleryImages) {
    duration: duration,
   });
  });
-}
+});
 
 const menu = document.getElementsByTagName('nav')[0];
+const menuItems = menu.getElementsByTagName('li');
 const menuButton = document.getElementById('menu-button');
 let menuIsOpened = false;
 menuButton.addEventListener('click', function() {
@@ -55,7 +56,18 @@ menuButton.addEventListener('click', function() {
    easing: 'ease-in-out',
    fill: 'forwards',
   });
-  menuButton.textContent = 'メニューを閉じる';
+  Array.from(menuItems).forEach(function(menuItem, index) {
+   menuItem.animate({
+    opacity: [1, 0],
+    transform: ['translate(0, 0)', 'translate(0, 3rem)'],
+   }, {
+    delay: 200 * (menuItems.length - (index + 1)),
+    duration: 500,
+    easing: 'ease-in-out',
+    fill: 'forwards',
+   });
+  });
+  menuButton.textContent = 'メニューを開く';
   menuIsOpened = false;
  } else {
   menu.animate({
@@ -65,7 +77,18 @@ menuButton.addEventListener('click', function() {
    easing: 'ease-in-out',
    fill: 'forwards',
   });
-  menuButton.textContent = 'メニューを開く';
+  Array.from(menuItems).forEach(function(menuItem, index) {
+   menuItem.animate({
+    opacity: [0, 1],
+    transform: ['translate(0, 3rem)', 'translate(0, 0)'],
+   }, {
+    delay: 300 * index,
+    duration: 1000,
+    easing: 'ease-in-out',
+    fill: 'forwards',
+   });
+  });
+  menuButton.textContent = 'メニューを閉じる';
   menuIsOpened = true;
  }
 });

@@ -29,7 +29,7 @@ body header, body footer {
   color: white;
   display: flex;
   height: var(--header-footer-height);
-  justify-content: space-around;
+  justify-content: space-between;
   z-index: 0;
 }
 body header address, body footer address {
@@ -45,7 +45,7 @@ body header button:hover, body footer button:hover {
   color: red;
   cursor: pointer;
 }
-body header div, body footer div {
+body header button, body header div, body header h1, body footer button, body footer div, body footer h1 {
   margin-left: 5rem;
   margin-right: 5rem;
 }
@@ -71,6 +71,7 @@ body nav ul {
 }
 body nav ul li {
   margin: 1rem;
+  opacity: 0;
 }
 body nav ul li:hover {
   color: red;
