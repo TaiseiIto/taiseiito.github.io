@@ -38,7 +38,9 @@ Array.from(snsLinks).forEach(function(snsLink) {
     easing: 'ease-in-out',
     fill: 'forwards',
    };
-   footer.animate(animationBody, animationProperty);
+   footer.animate({
+    height: snsLink.riding ? [footer.clientHeight + 'px', 2 * footerHeight + 'px'] : [footer.clientHeight + 'px', footerHeight + 'px'],
+   }, animationProperty);
    const animation = snsLink.animate(animationBody, animationProperty);
    animation.oncancel = animation.onfinish = function() {
     snsLink.moving = false;
