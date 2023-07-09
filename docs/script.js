@@ -38,7 +38,6 @@ snsLinks.forEach(function(snsLink) {
     easing: 'ease-in-out',
     fill: 'forwards',
    };
-   footerCurrentHeight = footer.clientHeight;
    footerRiding = snsLinks.map((snsLink) => snsLink.riding).reduce((footerRiding, snsLinkRiding) => footerRiding || snsLinkRiding, false);
    footer.animate({
     height: footerRiding ? [footer.clientHeight + 'px', 2 * footerHeight + 'px'] : [footer.clientHeight + 'px', footerHeight + 'px'],
