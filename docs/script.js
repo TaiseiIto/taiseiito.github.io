@@ -22,47 +22,48 @@ modeObserverObserver.observe(modeObserver);
 
 // SNS links
 const footerHeight = footer.clientHeight;
-let animationPermission = true;
 Array.from(snsLinks).forEach(function(snsLink) {
- snsLink.addEventListener('mouseover', function() {
-  if(animationPermission) {
-   animationPermission = false;
-   const animation = {
-    height: [footerHeight + 'px', 2 * footerHeight + 'px'],
-   };
-   const animationProperty = {
+ const animationProperty = {
+  duration: 300,
+  easing: 'ease-in-out',
+  fill: 'both',
+ };
+ snsLink.moving = false;
+ snsLink.riding = false;
+ snsLink.lastRiding = false;
+ function focus() {
+  if(!snsLink.moving) {
+   snsLink.moving = true;
+   snsLink.lastRiding = snsLink.riding;
+   footer.animate({
+    height: snsLink.riding ? [footerHeight + 'px', 2 * footerHeight + 'px'] : [2 * footerHeight + 'px', footerHeight + 'px'],
+   }, {
     duration: 300,
     easing: 'ease-in-out',
-    fill: 'both',
-   };
-   footerAnimation = footer.animate(animation, animationProperty);
-   console.log(footerAnimation);
-   snsLinkAnimation = snsLink.animate(animation, animationProperty);
-   console.log(snsLinkAnimation);
-   snsLinkAnimation.onfinish = function () {
-    animationPermission = true;
+    fill: 'forwards',
+   });
+   animation = snsLink.animate({
+    height: snsLink.riding ? [footerHeight + 'px', 2 * footerHeight + 'px'] : [2 * footerHeight + 'px', footerHeight + 'px'],
+   }, {
+    duration: 300,
+    easing: 'ease-in-out',
+    fill: 'forwards',
+   });
+   animation.oncancel = animation.onfinish = function() {
+    snsLink.moving = false;
+    if(snsLink.riding != snsLink.lastRiding) {
+     focus();
+    }
    }
   }
+ }
+ snsLink.addEventListener('mouseover', function() {
+  snsLink.riding = true;
+  focus();
  });
  snsLink.addEventListener('mouseout', function() {
-  if(animationPermission) {
-   animationPermission = false;
-   const animation = {
-    height: [2 * footerHeight + 'px', footerHeight + 'px'],
-   };
-   const animationProperty = {
-    duration: 300,
-    easing: 'ease-in-out',
-    fill: 'both',
-   };
-   footerAnimation = footer.animate(animation, animationProperty);
-   console.log(footerAnimation);
-   snsLinkAnimation = snsLink.animate(animation, animationProperty);
-   console.log(snsLinkAnimation);
-   snsLinkAnimation.onfinish = function () {
-    animationPermission = true;
-   }
-  }
+  snsLink.riding = false;
+  focus();
  });
 });
 
