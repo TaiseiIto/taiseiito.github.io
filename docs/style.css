@@ -61,6 +61,16 @@ body footer address ul li {
 body footer address ul li img {
   height: 80%;
 }
+body main {
+  margin-top: var(--header-height);
+  margin-bottom: var(--footer-height);
+  margin-left: 0;
+  margin-right: 0;
+  padding: 1rem;
+}
+body main ul {
+  margin: 1rem;
+}
 
 #mode-observer {
   position: fixed;

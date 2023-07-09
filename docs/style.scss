@@ -56,6 +56,18 @@ body {
    }
   }
  }
+ main {
+  margin: {
+   top: var(--header-height);
+   bottom: var(--footer-height);
+   left: 0;
+   right: 0;
+  }
+  padding: 1rem;
+  ul {
+   margin: 1rem;
+  }
+ }
 }
 #mode-observer {
  position: fixed;
