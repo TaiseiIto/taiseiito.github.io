@@ -41,5 +41,13 @@ body footer address ul {
   justify-content: space-evenly;
   list-style: none;
 }
+body footer address ul li {
+  align-items: center;
+  display: flex;
+  height: 100%;
+}
+body footer address ul li img {
+  height: 80%;
+}
 
 /*# sourceMappingURL=style.css.map */
