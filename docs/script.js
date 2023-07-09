@@ -35,5 +35,17 @@ Array.from(snsLinks).forEach(function(snsLink) {
   footer.animate(animation, animationProperty);
   snsLink.animate(animation, animationProperty);
  });
+ snsLink.addEventListener('mouseout', function() {
+  animation = {
+   height: [2 * footerHeight + 'px', footerHeight + 'px'],
+  };
+  animationProperty = {
+   duration: 300,
+   easing: 'ease-in-out',
+   fill: 'both',
+  };
+  footer.animate(animation, animationProperty);
+  snsLink.animate(animation, animationProperty);
+ });
 });
 
