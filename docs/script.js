@@ -23,11 +23,6 @@ modeObserverObserver.observe(modeObserver);
 // SNS links
 const footerHeight = footer.clientHeight;
 Array.from(snsLinks).forEach(function(snsLink) {
- const animationProperty = {
-  duration: 300,
-  easing: 'ease-in-out',
-  fill: 'both',
- };
  snsLink.moving = false;
  snsLink.riding = false;
  snsLink.lastRiding = false;
