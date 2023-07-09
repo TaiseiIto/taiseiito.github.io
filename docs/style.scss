@@ -6,6 +6,16 @@
 body {
  --header-height: 3rem;
  --footer-height: 3rem;
+ @media(prefers-color-scheme: light) {
+  --shadow-color: #ccc;
+  background: white;
+  color: black;
+ }
+ @media(prefers-color-scheme: dark) {
+  --shadow-color: #888;
+  background: black;
+  color: white;
+ }
  a {
   color: inherit;
   text-decoration: none;
@@ -16,13 +26,13 @@ body {
   width: 100vw;
  }
  header {
-  box-shadow: 0 -1rem 1rem 1rem #ccc;
+  box-shadow: 0 -1rem 1rem 1rem var(--shadow-color);
   height: var(--header-height);
   text-align: center;
   top: 0;
  }
  footer {
-  box-shadow: 0 1rem 1rem 1rem #ccc;
+  box-shadow: 0 1rem 1rem 1rem var(--shadow-color);
   bottom: 0;
   height: var(--footer-height);
   address{
@@ -44,6 +54,19 @@ body {
     }
    }
   }
+ }
+}
+#mode-observer {
+ position: fixed;
+ top: 0;
+ left: 0;
+ height: 0;
+ width: 0;
+ @media(prefers-color-scheme: light) {
+  display: none;
+ }
+ @media(prefers-color-scheme: dark) {
+  display: block;
  }
 }
 

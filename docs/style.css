@@ -7,6 +7,20 @@ body {
   --header-height: 3rem;
   --footer-height: 3rem;
 }
+@media (prefers-color-scheme: light) {
+  body {
+    --shadow-color: #ccc;
+    background: white;
+    color: black;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    --shadow-color: #888;
+    background: black;
+    color: white;
+  }
+}
 body a {
   color: inherit;
   text-decoration: none;
@@ -17,13 +31,13 @@ body header, body footer {
   width: 100vw;
 }
 body header {
-  box-shadow: 0 -1rem 1rem 1rem #ccc;
+  box-shadow: 0 -1rem 1rem 1rem var(--shadow-color);
   height: var(--header-height);
   text-align: center;
   top: 0;
 }
 body footer {
-  box-shadow: 0 1rem 1rem 1rem #ccc;
+  box-shadow: 0 1rem 1rem 1rem var(--shadow-color);
   bottom: 0;
   height: var(--footer-height);
 }
@@ -45,6 +59,24 @@ body footer address ul li {
 }
 body footer address ul li img {
   height: 80%;
+}
+
+#mode-observer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 0;
+  width: 0;
+}
+@media (prefers-color-scheme: light) {
+  #mode-observer {
+    display: none;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  #mode-observer {
+    display: block;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
