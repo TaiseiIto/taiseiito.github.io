@@ -49,13 +49,14 @@ body footer address ul {
   align-items: center;
   display: flex;
   height: 100%;
-  justify-content: space-evenly;
   list-style: none;
 }
 body footer address ul li {
   align-items: center;
   display: flex;
-  height: 100%;
+  height: var(--footer-height);
+  justify-content: center;
+  text-align: center;
 }
 body footer address ul li img {
   height: 80%;

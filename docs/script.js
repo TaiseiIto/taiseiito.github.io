@@ -1,3 +1,10 @@
+// Adjust page design
+const footer = document.getElementsByTagName('footer')[0];
+const snsLinks = footer.getElementsByTagName('li');
+Array.from(snsLinks).forEach(function(snsLink) {
+ snsLink.style.width = (footer.clientWidth / snsLinks.length) + 'px';
+});
+
 // Switch between light mode and dark mode
 const modeObserver = document.getElementById('mode-observer');
 const modeObserverObserver = new IntersectionObserver(function() {
@@ -14,21 +21,19 @@ const modeObserverObserver = new IntersectionObserver(function() {
 modeObserverObserver.observe(modeObserver);
 
 // SNS links
-const address = document.getElementsByTagName('address')[0];
-const addressHeight = address.clientHeight;
-console.log(address);
-const links = address.getElementsByTagName('a');
-Array.from(links).forEach(function(link) {
- console.log(link);
- link.addEventListener('mouseover', function() {
-  console.log('mouseover');
-  address.animate({
-   height: [addressHeight + 'px', 2 * addressHeight + 'px'],
-  }, {
+const footerHeight = footer.clientHeight;
+Array.from(snsLinks).forEach(function(snsLink) {
+ snsLink.addEventListener('mouseover', function() {
+  animation = {
+   height: [footerHeight + 'px', 2 * footerHeight + 'px'],
+  };
+  animationProperty = {
    duration: 300,
    easing: 'ease-in-out',
    fill: 'both',
-  });
+  };
+  footer.animate(animation, animationProperty);
+  snsLink.animate(animation, animationProperty);
  });
 });
 
