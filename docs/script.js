@@ -22,30 +22,47 @@ modeObserverObserver.observe(modeObserver);
 
 // SNS links
 const footerHeight = footer.clientHeight;
+let animationPermission = true;
 Array.from(snsLinks).forEach(function(snsLink) {
  snsLink.addEventListener('mouseover', function() {
-  animation = {
-   height: [footerHeight + 'px', 2 * footerHeight + 'px'],
-  };
-  animationProperty = {
-   duration: 300,
-   easing: 'ease-in-out',
-   fill: 'both',
-  };
-  footer.animate(animation, animationProperty);
-  snsLink.animate(animation, animationProperty);
+  if(animationPermission) {
+   animationPermission = false;
+   const animation = {
+    height: [footerHeight + 'px', 2 * footerHeight + 'px'],
+   };
+   const animationProperty = {
+    duration: 300,
+    easing: 'ease-in-out',
+    fill: 'both',
+   };
+   footerAnimation = footer.animate(animation, animationProperty);
+   console.log(footerAnimation);
+   snsLinkAnimation = snsLink.animate(animation, animationProperty);
+   console.log(snsLinkAnimation);
+   snsLinkAnimation.onfinish = function () {
+    animationPermission = true;
+   }
+  }
  });
  snsLink.addEventListener('mouseout', function() {
-  animation = {
-   height: [2 * footerHeight + 'px', footerHeight + 'px'],
-  };
-  animationProperty = {
-   duration: 300,
-   easing: 'ease-in-out',
-   fill: 'both',
-  };
-  footer.animate(animation, animationProperty);
-  snsLink.animate(animation, animationProperty);
+  if(animationPermission) {
+   animationPermission = false;
+   const animation = {
+    height: [2 * footerHeight + 'px', footerHeight + 'px'],
+   };
+   const animationProperty = {
+    duration: 300,
+    easing: 'ease-in-out',
+    fill: 'both',
+   };
+   footerAnimation = footer.animate(animation, animationProperty);
+   console.log(footerAnimation);
+   snsLinkAnimation = snsLink.animate(animation, animationProperty);
+   console.log(snsLinkAnimation);
+   snsLinkAnimation.onfinish = function () {
+    animationPermission = true;
+   }
+  }
  });
 });
 
