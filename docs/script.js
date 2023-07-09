@@ -1,7 +1,7 @@
 // Adjust page design
 const footer = document.getElementsByTagName('footer')[0];
-const snsLinks = footer.getElementsByTagName('li');
-Array.from(snsLinks).forEach(function(snsLink) {
+const snsLinks = Array.from(footer.getElementsByTagName('li'));
+snsLinks.forEach(function(snsLink) {
  snsLink.style.width = (footer.clientWidth / snsLinks.length) + 'px';
 });
 
@@ -22,7 +22,7 @@ modeObserverObserver.observe(modeObserver);
 
 // SNS links
 const footerHeight = footer.clientHeight;
-Array.from(snsLinks).forEach(function(snsLink) {
+snsLinks.forEach(function(snsLink) {
  snsLink.moving = false;
  snsLink.riding = false;
  snsLink.lastRiding = false;
@@ -38,8 +38,10 @@ Array.from(snsLinks).forEach(function(snsLink) {
     easing: 'ease-in-out',
     fill: 'forwards',
    };
+   footerCurrentHeight = footer.clientHeight;
+   footerRiding = snsLinks.map((snsLink) => snsLink.riding).reduce((footerRiding, snsLinkRiding) => footerRiding || snsLinkRiding, false);
    footer.animate({
-    height: snsLink.riding ? [footer.clientHeight + 'px', 2 * footerHeight + 'px'] : [footer.clientHeight + 'px', footerHeight + 'px'],
+    height: footerRiding ? [footer.clientHeight + 'px', 2 * footerHeight + 'px'] : [footer.clientHeight + 'px', footerHeight + 'px'],
    }, animationProperty);
    const animation = snsLink.animate(animationBody, animationProperty);
    animation.oncancel = animation.onfinish = function() {
