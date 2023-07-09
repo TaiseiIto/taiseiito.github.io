@@ -46,7 +46,7 @@ body footer address {
   height: 100%;
 }
 body footer address ul {
-  align-items: center;
+  align-items: end;
   display: flex;
   height: 100%;
   list-style: none;

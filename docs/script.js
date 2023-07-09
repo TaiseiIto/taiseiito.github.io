@@ -35,20 +35,16 @@ Array.from(snsLinks).forEach(function(snsLink) {
   if(!snsLink.moving) {
    snsLink.moving = true;
    snsLink.lastRiding = snsLink.riding;
-   footer.animate({
+   const animationBody = {
     height: snsLink.riding ? [footerHeight + 'px', 2 * footerHeight + 'px'] : [2 * footerHeight + 'px', footerHeight + 'px'],
-   }, {
+   };
+   const animationProperty = {
     duration: 300,
     easing: 'ease-in-out',
     fill: 'forwards',
-   });
-   animation = snsLink.animate({
-    height: snsLink.riding ? [footerHeight + 'px', 2 * footerHeight + 'px'] : [2 * footerHeight + 'px', footerHeight + 'px'],
-   }, {
-    duration: 300,
-    easing: 'ease-in-out',
-    fill: 'forwards',
-   });
+   };
+   footer.animate(animationBody, animationProperty);
+   const animation = snsLink.animate(animationBody, animationProperty);
    animation.oncancel = animation.onfinish = function() {
     snsLink.moving = false;
     if(snsLink.riding != snsLink.lastRiding) {
