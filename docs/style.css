@@ -26,6 +26,7 @@ body a {
   text-decoration: none;
 }
 body header, body footer {
+  background: inherit;
   left: 0;
   position: fixed;
   width: 100vw;
