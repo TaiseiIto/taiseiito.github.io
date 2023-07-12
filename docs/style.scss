@@ -21,12 +21,10 @@ body {
   color: inherit;
   text-decoration: none;
  }
- header, footer, main {
-  position: fixed;
- }
  header, footer {
   background: inherit;
   left: 0;
+  position: fixed;
   width: 100vw;
  }
  header {
@@ -61,21 +59,41 @@ body {
   }
  }
  main {
-  -ms-overflow-style: none;
   height: var(--main-height);
-  overflow: auto;
-  scroll-snap-type: y mandatory;
-  scrollbar-width: none;
+  position: relative;
   top: var(--header-height);
-  &::-webkit-scrollbar {
-   display: none;
+  width: 100%;
+  #previous, #next {
+   left: 0;
+   position: absolute;
+   text-align: center;
+   width: 100%;
   }
-  section {
+  #previous {
+   top: 0;
+  }
+  #next {
+   bottom: 0;
+  }
+  #sections {
+   -ms-overflow-style: none;
    height: 100%;
-   scroll-snap-align: center;
-  }
-  ul {
-   margin: 1rem;
+   left: 0;
+   overflow: auto;
+   position: absolute;
+   scroll-snap-type: y mandatory;
+   scrollbar-width: none;
+   top: 0;
+   &::-webkit-scrollbar {
+    display: none;
+   }
+   section {
+    height: 100%;
+    scroll-snap-align: center;
+   }
+   ul {
+    margin: 1rem;
+   }
   }
  }
 }

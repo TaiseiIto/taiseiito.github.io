@@ -26,12 +26,10 @@ body a {
   color: inherit;
   text-decoration: none;
 }
-body header, body footer, body main {
-  position: fixed;
-}
 body header, body footer {
   background: inherit;
   left: 0;
+  position: fixed;
   width: 100vw;
 }
 body header {
@@ -66,21 +64,41 @@ body footer address ul li img {
   height: 80%;
 }
 body main {
-  -ms-overflow-style: none;
   height: var(--main-height);
+  position: relative;
+  top: var(--header-height);
+  width: 100%;
+}
+body main #previous, body main #next {
+  left: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+body main #previous {
+  top: 0;
+}
+body main #next {
+  bottom: 0;
+}
+body main #sections {
+  -ms-overflow-style: none;
+  height: 100%;
+  left: 0;
   overflow: auto;
+  position: absolute;
   scroll-snap-type: y mandatory;
   scrollbar-width: none;
-  top: var(--header-height);
+  top: 0;
 }
-body main::-webkit-scrollbar {
+body main #sections::-webkit-scrollbar {
   display: none;
 }
-body main section {
+body main #sections section {
   height: 100%;
   scroll-snap-align: center;
 }
-body main ul {
+body main #sections ul {
   margin: 1rem;
 }
 
