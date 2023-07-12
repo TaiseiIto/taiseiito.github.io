@@ -20,6 +20,18 @@ const modeObserverObserver = new IntersectionObserver(function() {
 });
 modeObserverObserver.observe(modeObserver);
 
+// Scroll
+const main = document.getElementsByTagName('main')[0];
+main.addEventListener('scrollend', function(scrollEvent) {
+ const mainRect = main.getBoundingClientRect();
+ const section = Array.from(main.getElementsByTagName('section')).filter(function(section) {
+  const sectionRect = section.getBoundingClientRect();
+  return sectionRect.y == mainRect.y;
+ })[0];
+ const h2 = section.getElementsByTagName('h2')[0];
+ console.log(h2.textContent);
+});
+
 // SNS links
 const footerHeight = footer.clientHeight;
 snsLinks.forEach(function(snsLink) {
