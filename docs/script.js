@@ -39,6 +39,8 @@ main.addEventListener('scrollend', function(scrollEvent) {
 
 // SNS links
 const footerHeight = footer.clientHeight;
+const shadowHeight = shadow.clientHeight;
+const next = document.getElementById('next');
 snsLinks.forEach(function(snsLink) {
  snsLink.moving = false;
  snsLink.riding = false;
@@ -58,6 +60,12 @@ snsLinks.forEach(function(snsLink) {
    footerRiding = snsLinks.map((snsLink) => snsLink.riding).reduce((footerRiding, snsLinkRiding) => footerRiding || snsLinkRiding, false);
    footer.animate({
     height: footerRiding ? [footer.clientHeight + 'px', 2 * footerHeight + 'px'] : [footer.clientHeight + 'px', footerHeight + 'px'],
+   }, animationProperty);
+   shadow.animate({
+    height: footerRiding ? [shadow.clientHeight + 'px', (shadowHeight - footerHeight) + 'px'] : [shadow.clientHeight + 'px', shadowHeight + 'px'],
+   }, animationProperty);
+   next.animate({
+    bottom: footerRiding ? [footer.clientHeight + 'px', 2 * footerHeight + 'px'] : [footer.clientHeight + 'px', footerHeight + 'px'],
    }, animationProperty);
    const animation = snsLink.animate(animationBody, animationProperty);
    animation.oncancel = animation.onfinish = function() {
