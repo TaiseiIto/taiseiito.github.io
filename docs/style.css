@@ -30,6 +30,7 @@ body header, body footer {
   left: 0;
   position: fixed;
   width: 100vw;
+  z-index: 1;
 }
 body header {
   box-shadow: 0 -1rem 1rem 1rem var(--shadow-color);
@@ -68,36 +69,32 @@ body main {
   position: fixed;
   top: 0;
   width: 100vw;
-}
-body main #previous, body main #next {
-  left: 0;
-  position: absolute;
-  text-align: center;
-  width: 100%;
-}
-body main #previous {
-  top: var(--header-height);
-}
-body main #next {
-  bottom: var(--footer-height);
-}
-body main #sections {
-  height: 100%;
-  left: 0;
   overflow: auto;
   position: absolute;
   scroll-snap-type: y mandatory;
-  top: 0;
-  width: 100%;
+  z-index: 0;
 }
-body main #sections section {
+body main section {
   height: calc(100% - var(--header-height) - var(--footer-height));
   scroll-snap-align: center;
   padding-top: var(--header-height);
   padding-bottom: var(--footer-height);
 }
-body main #sections ul {
+body main section ul {
   margin: 1rem;
+}
+body #previous, body #next {
+  left: 0;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  z-index: 1;
+}
+body #previous {
+  top: var(--header-height);
+}
+body #next {
+  bottom: var(--footer-height);
 }
 
 #mode-observer {

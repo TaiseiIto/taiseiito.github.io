@@ -25,6 +25,7 @@ body {
   left: 0;
   position: fixed;
   width: 100vw;
+  z-index: 1;
  }
  header {
   box-shadow: 0 -1rem 1rem 1rem var(--shadow-color);
@@ -63,38 +64,34 @@ body {
   position: fixed;
   top: 0;
   width: 100vw;
-  #previous, #next {
-   left: 0;
-   position: absolute;
-   text-align: center;
-   width: 100%;
-  }
-  #previous {
-   top: var(--header-height);
-  }
-  #next {
-   bottom: var(--footer-height);
-  }
-  #sections {
-   height: 100%;
-   left: 0;
-   overflow: auto;
-   position: absolute;
-   scroll-snap-type: y mandatory;
-   top: 0;
-   width: 100%;
-   section {
-    height: calc(100% - var(--header-height) - var(--footer-height));
-    scroll-snap-align: center;
-    padding: {
-     top: var(--header-height);
-     bottom: var(--footer-height);
-    }
+  overflow: auto;
+  position: absolute;
+  scroll-snap-type: y mandatory;
+  z-index: 0;
+  section {
+   height: calc(100% - var(--header-height) - var(--footer-height));
+   scroll-snap-align: center;
+   padding: {
+    top: var(--header-height);
+    bottom: var(--footer-height);
    }
    ul {
     margin: 1rem;
    }
   }
+ }
+ #previous, #next {
+  left: 0;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  z-index: 1;
+ }
+ #previous {
+  top: var(--header-height);
+ }
+ #next {
+  bottom: var(--footer-height);
  }
 }
 #mode-observer {

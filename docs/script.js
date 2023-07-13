@@ -1,5 +1,9 @@
 // Adjust page design
+const main = document.getElementsByTagName('main')[0];
+const header = document.getElementsByTagName('header')[0];
+header.style.width = main.clientWidth;
 const footer = document.getElementsByTagName('footer')[0];
+footer.style.width = main.clientWidth;
 const snsLinks = Array.from(footer.getElementsByTagName('li'));
 snsLinks.forEach(function(snsLink) {
  snsLink.style.width = (footer.clientWidth / snsLinks.length) + 'px';
