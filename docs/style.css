@@ -6,7 +6,6 @@
 body {
   --header-height: 3rem;
   --footer-height: 3rem;
-  --main-height: calc(100vh - var(--header-height) - var(--footer-height));
 }
 @media (prefers-color-scheme: light) {
   body {
@@ -64,10 +63,11 @@ body footer address ul li img {
   height: 80%;
 }
 body main {
-  height: var(--main-height);
-  position: relative;
-  top: var(--header-height);
-  width: 100%;
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
 }
 body main #previous, body main #next {
   left: 0;
@@ -76,27 +76,25 @@ body main #previous, body main #next {
   width: 100%;
 }
 body main #previous {
-  top: 0;
+  top: var(--header-height);
 }
 body main #next {
-  bottom: 0;
+  bottom: var(--footer-height);
 }
 body main #sections {
-  -ms-overflow-style: none;
   height: 100%;
   left: 0;
   overflow: auto;
   position: absolute;
   scroll-snap-type: y mandatory;
-  scrollbar-width: none;
   top: 0;
-}
-body main #sections::-webkit-scrollbar {
-  display: none;
+  width: 100%;
 }
 body main #sections section {
-  height: 100%;
+  height: calc(100% - var(--header-height) - var(--footer-height));
   scroll-snap-align: center;
+  padding-top: var(--header-height);
+  padding-bottom: var(--footer-height);
 }
 body main #sections ul {
   margin: 1rem;
