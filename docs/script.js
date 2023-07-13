@@ -4,6 +4,8 @@ const header = document.getElementsByTagName('header')[0];
 header.style.width = main.clientWidth;
 const footer = document.getElementsByTagName('footer')[0];
 footer.style.width = main.clientWidth;
+const shadow = document.getElementById('shadow');
+shadow.style.width = main.clientWidth;
 const snsLinks = Array.from(footer.getElementsByTagName('li'));
 snsLinks.forEach(function(snsLink) {
  snsLink.style.width = (footer.clientWidth / snsLinks.length) + 'px';
@@ -25,12 +27,11 @@ const modeObserverObserver = new IntersectionObserver(function() {
 modeObserverObserver.observe(modeObserver);
 
 // Scroll
-const sections = document.getElementById('sections');
-sections.addEventListener('scrollend', function(scrollEvent) {
- const sectionsRect = sections.getBoundingClientRect();
- const section = Array.from(sections.getElementsByTagName('section')).filter(function(section) {
+main.addEventListener('scrollend', function(scrollEvent) {
+ const mainRect = main.getBoundingClientRect();
+ const section = Array.from(main.getElementsByTagName('section')).filter(function(section) {
   const sectionRect = section.getBoundingClientRect();
-  return sectionRect.y == sectionsRect.y;
+  return sectionRect.y == mainRect.y;
  })[0];
  const h2 = section.getElementsByTagName('h2')[0];
  console.log(h2.textContent);
