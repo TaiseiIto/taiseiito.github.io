@@ -82,6 +82,14 @@ body main section {
   padding-top: var(--header-height);
   padding-bottom: var(--footer-height);
 }
+body main section h2 {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to right, red, rgba(255, 0, 0, 0));
+  width: calc(100% / 3);
+  height: 5rem;
+  padding-left: 1rem;
+}
 body main section ul {
   margin: 1rem;
 }

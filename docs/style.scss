@@ -77,6 +77,14 @@ body {
     top: var(--header-height);
     bottom: var(--footer-height);
    }
+   h2 {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to right, rgba(255, 0, 0, 1) , rgba(255, 0, 0, 0));
+    width: calc(100% / 3);
+    height: 5rem;
+    padding-left: 1rem;
+   }
    ul {
     margin: 1rem;
    }
