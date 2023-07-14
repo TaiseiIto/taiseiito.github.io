@@ -95,6 +95,7 @@ body {
   display: flex;
   flex-direction: column;
   left: 0;
+  pointer-events: none;
   position: fixed;
   width: 100%;
   z-index: 1;
