@@ -17,6 +17,9 @@ window.addEventListener('resize', function(resizeEvent) {
  header.style.width = main.clientWidth;
  footer.style.width = main.clientWidth;
  shadow.style.width = main.clientWidth;
+ snsLinks.forEach(function(snsLink) {
+  snsLink.style.width = (footer.clientWidth / snsLinks.length) + 'px';
+ });
 });
 
 // Switch between light mode and dark mode
