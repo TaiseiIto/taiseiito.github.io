@@ -11,6 +11,14 @@ snsLinks.forEach(function(snsLink) {
  snsLink.style.width = (footer.clientWidth / snsLinks.length) + 'px';
 });
 
+// Resize window
+window.addEventListener('resize', function(resizeEvent) {
+ console.log('Resize window');
+ header.style.width = main.clientWidth;
+ footer.style.width = main.clientWidth;
+ shadow.style.width = main.clientWidth;
+});
+
 // Switch between light mode and dark mode
 const modeObserver = document.getElementById('mode-observer');
 const modeObserverObserver = new IntersectionObserver(function() {
