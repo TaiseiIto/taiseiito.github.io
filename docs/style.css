@@ -6,6 +6,7 @@
 body {
   --header-height: 3rem;
   --footer-height: 3rem;
+  --subtitle-height: 5rem;
 }
 @media (prefers-color-scheme: light) {
   body {
@@ -77,21 +78,40 @@ body main {
   z-index: 0;
 }
 body main section {
-  height: calc(100% - var(--header-height) - var(--footer-height));
+  height: calc(100% - var(--header-height) - var(--footer-height) - var(--subtitle-height));
   scroll-snap-align: center;
-  padding-top: var(--header-height);
+  padding-top: calc(var(--header-height) + var(--subtitle-height));
   padding-bottom: var(--footer-height);
 }
 body main section h2 {
-  align-items: center;
-  background: linear-gradient(to right, red, rgba(255, 0, 0, 0));
-  display: flex;
-  height: 5rem;
-  padding-left: 1rem;
-  width: calc(100% / 3);
+  display: none;
 }
 body main section ul {
   margin: 1rem;
+}
+body #subtitle {
+  align-items: center;
+  background: white;
+  display: flex;
+  font-size: x-large;
+  font-weight: bold;
+  height: var(--subtitle-height);
+  left: 0;
+  position: fixed;
+  position: relative;
+  top: var(--header-height);
+  width: 100%;
+  z-index: 1;
+}
+body #subtitle #subtitle-text {
+  padding-left: 1rem;
+}
+body #subtitle #subtitle-underline {
+  background: linear-gradient(to right, black 0%, white calc(100% / 3), white 100%);
+  bottom: 0;
+  height: 1rem;
+  position: absolute;
+  width: 100%;
 }
 body #previous, body #next {
   align-items: center;

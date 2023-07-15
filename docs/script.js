@@ -6,6 +6,11 @@ const footer = document.getElementsByTagName('footer')[0];
 footer.style.width = main.clientWidth;
 const shadow = document.getElementById('shadow');
 shadow.style.width = main.clientWidth;
+const subtitle = document.getElementById('subtitle');
+console.log(subtitle);
+subtitle.style.width = main.clientWidth;
+const subtitleText = document.getElementById('subtitle-text');
+console.log(subtitleText);
 const snsLinks = Array.from(footer.getElementsByTagName('li'));
 snsLinks.forEach(function(snsLink) {
  snsLink.style.width = (footer.clientWidth / snsLinks.length) + 'px';
@@ -17,6 +22,7 @@ window.addEventListener('resize', function(resizeEvent) {
  header.style.width = main.clientWidth;
  footer.style.width = main.clientWidth;
  shadow.style.width = main.clientWidth;
+ subtitle.style.width = main.clientWidth;
  snsLinks.forEach(function(snsLink) {
   snsLink.style.width = (footer.clientWidth / snsLinks.length) + 'px';
  });
@@ -46,6 +52,7 @@ main.addEventListener('scrollend', function(scrollEvent) {
  })[0];
  const h2 = section.getElementsByTagName('h2')[0];
  console.log(h2.textContent);
+ subtitleText.innerText = h2.textContent;
 });
 
 // SNS links
