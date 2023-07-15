@@ -124,6 +124,11 @@ body {
   position: fixed;
   width: 100%;
   z-index: 1;
+  a {
+   align-items: center;
+   display: flex;
+   flex-direction: column;
+  }
  }
  #previous {
   top: var(--header-height);
