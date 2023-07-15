@@ -6,7 +6,7 @@
 body {
   --header-height: 3rem;
   --footer-height: 3rem;
-  --subtitle-height: 3rem;
+  --section-title-height: 3rem;
 }
 @media (prefers-color-scheme: light) {
   body {
@@ -79,9 +79,9 @@ body main {
   z-index: 0;
 }
 body main section {
-  height: calc(100% - var(--header-height) - var(--footer-height) - var(--subtitle-height));
+  height: calc(100% - var(--header-height) - var(--footer-height) - var(--section-title-height));
   scroll-snap-align: center;
-  padding-top: calc(var(--header-height) + var(--subtitle-height));
+  padding-top: calc(var(--header-height) + var(--section-title-height));
   padding-bottom: var(--footer-height);
 }
 body main section h2 {
@@ -90,13 +90,13 @@ body main section h2 {
 body main section ul {
   margin: 1rem;
 }
-body #subtitle {
+body #section-title {
   align-items: center;
   background: white;
   display: flex;
   font-size: x-large;
   font-weight: bold;
-  height: var(--subtitle-height);
+  height: var(--section-title-height);
   left: 0;
   pointer-events: none;
   position: relative;
@@ -104,13 +104,15 @@ body #subtitle {
   width: 100%;
   z-index: 1;
 }
-body #subtitle #subtitle-text {
+body #section-title #section-title-text {
+  pointer-events: auto;
   padding-left: 1rem;
 }
-body #subtitle #subtitle-underline {
+body #section-title #section-title-underline {
   background: linear-gradient(to right, black 0%, white calc(100% / 3), white 100%);
   bottom: 0;
   height: 5px;
+  pointer-events: auto;
   position: absolute;
   width: 100%;
 }

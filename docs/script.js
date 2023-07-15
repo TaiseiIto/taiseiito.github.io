@@ -2,20 +2,20 @@
 const main = document.getElementsByTagName('main')[0];
 const header = document.getElementsByTagName('header')[0];
 const footer = document.getElementsByTagName('footer')[0];
-const subtitle = document.getElementById('subtitle');
-const subtitleText = document.getElementById('subtitle-text');
+const sectionTitle = document.getElementById('section-title');
+const sectionTitleText = document.getElementById('section-title-text');
 const snsLinks = Array.from(footer.getElementsByTagName('li'));
 const previous = document.getElementById('previous');
-const previousSubtitle = document.getElementById('previous-subtitle');
+const previousSectionTitle = document.getElementById('previous-section-title');
 const next = document.getElementById('next');
-const nextSubtitle = document.getElementById('next-subtitle');
+const nextSectionTitle = document.getElementById('next-section-title');
 
 // Resize window
 function resizeWindow() {
  console.log('Resize window');
  header.style.width = main.clientWidth;
  footer.style.width = main.clientWidth;
- subtitle.style.width = main.clientWidth;
+ sectionTitle.style.width = main.clientWidth;
  snsLinks.forEach(function(snsLink) {
   snsLink.style.width = (footer.clientWidth / snsLinks.length) + 'px';
  });
@@ -46,18 +46,18 @@ function scrollEnd(scrollEvent) {
   return sectionRect.y == mainRect.y;
  })[0];
  const h2 = section.getElementsByTagName('h2')[0];
- subtitleText.textContent = h2.textContent;
+ sectionTitleText.textContent = h2.textContent;
  const previousSection = section.previousElementSibling;
  if(previousSection) {
   previous.style.display = 'flex';
-  previousSubtitle.textContent = previousSection.getElementsByTagName('h2')[0].textContent;
+  previousSectionTitle.textContent = previousSection.getElementsByTagName('h2')[0].textContent;
  } else {
   previous.style.display = 'none';
  }
  const nextSection = section.nextElementSibling;
  if(nextSection) {
   next.style.display = "flex";
-  nextSubtitle.textContent = nextSection.getElementsByTagName('h2')[0].textContent;
+  nextSectionTitle.textContent = nextSection.getElementsByTagName('h2')[0].textContent;
  } else {
   next.style.display = "none";
  }
