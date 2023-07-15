@@ -6,8 +6,10 @@ const sectionTitle = document.getElementById('section-title');
 const sectionTitleText = document.getElementById('section-title-text');
 const snsLinks = Array.from(footer.getElementsByTagName('li'));
 const previous = document.getElementById('previous');
+const previousLink = document.getElementById('previous-link');
 const previousSectionTitle = document.getElementById('previous-section-title');
 const next = document.getElementById('next');
+const nextLink = document.getElementById('next-link');
 const nextSectionTitle = document.getElementById('next-section-title');
 const sections = Array.from(document.getElementsByTagName('section'));
 sections.forEach(function(section, index) {
@@ -54,7 +56,7 @@ function scrollEnd(scrollEvent) {
  if(previousSection) {
   previous.style.display = 'flex';
   previousSectionTitle.textContent = previousSection.getElementsByTagName('h2')[0].textContent;
-  console.log(previousSection.id);
+  previousLink.setAttribute('href', `#${previousSection.id}`);
  } else {
   previous.style.display = 'none';
  }
@@ -62,7 +64,7 @@ function scrollEnd(scrollEvent) {
  if(nextSection) {
   next.style.display = "flex";
   nextSectionTitle.textContent = nextSection.getElementsByTagName('h2')[0].textContent;
-  console.log(nextSection.id);
+  nextLink.setAttribute('href', `#${nextSection.id}`);
  } else {
   next.style.display = "none";
  }
