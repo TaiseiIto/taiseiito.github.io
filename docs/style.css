@@ -135,7 +135,7 @@ body #up-arrow, body #down-arrow {
   width: 2rem;
 }
 body #up-arrow {
-  background: linear-gradient(to bottom, #80ffc0, rgba(128, 255, 224, 0));
+  background: linear-gradient(to bottom, #80ffc0, rgba(128, 255, 192, 0));
   clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
 }
 body #down-arrow {

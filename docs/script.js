@@ -1,21 +1,13 @@
 // Adjust page design
 const main = document.getElementsByTagName('main')[0];
 const header = document.getElementsByTagName('header')[0];
-header.style.width = main.clientWidth;
 const footer = document.getElementsByTagName('footer')[0];
-footer.style.width = main.clientWidth;
 const subtitle = document.getElementById('subtitle');
-console.log(subtitle);
-subtitle.style.width = main.clientWidth;
 const subtitleText = document.getElementById('subtitle-text');
-console.log(subtitleText);
 const snsLinks = Array.from(footer.getElementsByTagName('li'));
-snsLinks.forEach(function(snsLink) {
- snsLink.style.width = (footer.clientWidth / snsLinks.length) + 'px';
-});
 
 // Resize window
-window.addEventListener('resize', function() {
+function resizeWindow() {
  console.log('Resize window');
  header.style.width = main.clientWidth;
  footer.style.width = main.clientWidth;
@@ -23,7 +15,9 @@ window.addEventListener('resize', function() {
  snsLinks.forEach(function(snsLink) {
   snsLink.style.width = (footer.clientWidth / snsLinks.length) + 'px';
  });
-});
+}
+resizeWindow();
+window.addEventListener('resize', resizeWindow);
 
 // Switch between light mode and dark mode
 const modeObserver = document.getElementById('mode-observer');
@@ -41,7 +35,7 @@ const modeObserverObserver = new IntersectionObserver(function() {
 modeObserverObserver.observe(modeObserver);
 
 // Scroll
-main.addEventListener('scrollend', function(scrollEvent) {
+function scrollEnd(scrollEvent) {
  const mainRect = main.getBoundingClientRect();
  const section = Array.from(main.getElementsByTagName('section')).filter(function(section) {
   const sectionRect = section.getBoundingClientRect();
@@ -50,7 +44,9 @@ main.addEventListener('scrollend', function(scrollEvent) {
  const h2 = section.getElementsByTagName('h2')[0];
  console.log(h2.textContent);
  subtitleText.innerText = h2.textContent;
-});
+}
+scrollEnd();
+main.addEventListener('scrollend', scrollEnd);
 
 // SNS links
 const footerHeight = footer.clientHeight;
