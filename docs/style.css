@@ -98,7 +98,7 @@ body #subtitle {
   font-weight: bold;
   height: var(--subtitle-height);
   left: 0;
-  position: fixed;
+  pointer-events: none;
   position: relative;
   top: var(--header-height);
   width: 100%;
