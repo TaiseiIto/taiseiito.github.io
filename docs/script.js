@@ -4,8 +4,6 @@ const header = document.getElementsByTagName('header')[0];
 header.style.width = main.clientWidth;
 const footer = document.getElementsByTagName('footer')[0];
 footer.style.width = main.clientWidth;
-const shadow = document.getElementById('shadow');
-shadow.style.width = main.clientWidth;
 const subtitle = document.getElementById('subtitle');
 console.log(subtitle);
 subtitle.style.width = main.clientWidth;
@@ -17,11 +15,10 @@ snsLinks.forEach(function(snsLink) {
 });
 
 // Resize window
-window.addEventListener('resize', function(resizeEvent) {
+window.addEventListener('resize', function() {
  console.log('Resize window');
  header.style.width = main.clientWidth;
  footer.style.width = main.clientWidth;
- shadow.style.width = main.clientWidth;
  subtitle.style.width = main.clientWidth;
  snsLinks.forEach(function(snsLink) {
   snsLink.style.width = (footer.clientWidth / snsLinks.length) + 'px';
@@ -57,7 +54,6 @@ main.addEventListener('scrollend', function(scrollEvent) {
 
 // SNS links
 const footerHeight = footer.clientHeight;
-const shadowHeight = shadow.clientHeight;
 const next = document.getElementById('next');
 snsLinks.forEach(function(snsLink) {
  snsLink.moving = false;
@@ -78,9 +74,6 @@ snsLinks.forEach(function(snsLink) {
    footerRiding = snsLinks.map((snsLink) => snsLink.riding).reduce((footerRiding, snsLinkRiding) => footerRiding || snsLinkRiding, false);
    footer.animate({
     height: footerRiding ? [footer.clientHeight + 'px', 2 * footerHeight + 'px'] : [footer.clientHeight + 'px', footerHeight + 'px'],
-   }, animationProperty);
-   shadow.animate({
-    height: footerRiding ? [shadow.clientHeight + 'px', (shadowHeight - footerHeight) + 'px'] : [shadow.clientHeight + 'px', shadowHeight + 'px'],
    }, animationProperty);
    next.animate({
     bottom: footerRiding ? [footer.clientHeight + 'px', 2 * footerHeight + 'px'] : [footer.clientHeight + 'px', footerHeight + 'px'],
