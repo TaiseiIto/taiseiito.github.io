@@ -9,10 +9,13 @@ const previous = document.getElementById('previous');
 const previousSectionTitle = document.getElementById('previous-section-title');
 const next = document.getElementById('next');
 const nextSectionTitle = document.getElementById('next-section-title');
+const sections = Array.from(document.getElementsByTagName('section'));
+sections.forEach(function(section, index) {
+ section.id = `section${index}`;
+});
 
 // Resize window
 function resizeWindow() {
- console.log('Resize window');
  header.style.width = main.clientWidth;
  footer.style.width = main.clientWidth;
  sectionTitle.style.width = main.clientWidth;
@@ -20,8 +23,8 @@ function resizeWindow() {
   snsLink.style.width = (footer.clientWidth / snsLinks.length) + 'px';
  });
 }
-resizeWindow();
 window.addEventListener('resize', resizeWindow);
+resizeWindow();
 
 // Switch between light mode and dark mode
 const modeObserver = document.getElementById('mode-observer');
@@ -51,6 +54,7 @@ function scrollEnd(scrollEvent) {
  if(previousSection) {
   previous.style.display = 'flex';
   previousSectionTitle.textContent = previousSection.getElementsByTagName('h2')[0].textContent;
+  console.log(previousSection.id);
  } else {
   previous.style.display = 'none';
  }
@@ -58,12 +62,13 @@ function scrollEnd(scrollEvent) {
  if(nextSection) {
   next.style.display = "flex";
   nextSectionTitle.textContent = nextSection.getElementsByTagName('h2')[0].textContent;
+  console.log(nextSection.id);
  } else {
   next.style.display = "none";
  }
 }
-scrollEnd();
 main.addEventListener('scrollend', scrollEnd);
+scrollEnd();
 
 // SNS links
 const footerHeight = footer.clientHeight;
