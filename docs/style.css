@@ -92,7 +92,7 @@ body main section ul {
 }
 body #section-title {
   align-items: center;
-  background: white;
+  background: linear-gradient(to right, white 0%, white calc(100%/3), transparent calc(100% * 2 / 3), transparent 100%);
   display: flex;
   font-size: x-large;
   font-weight: bold;
@@ -109,7 +109,7 @@ body #section-title #section-title-text {
   padding-left: 1rem;
 }
 body #section-title #section-title-underline {
-  background: linear-gradient(to right, black 0%, white calc(100% / 3), white 100%);
+  background: linear-gradient(to right, black 0%, transparent calc(100% / 3), transparent 100%);
   bottom: 0;
   height: 5px;
   pointer-events: auto;
