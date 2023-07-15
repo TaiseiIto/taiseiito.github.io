@@ -5,6 +5,10 @@ const footer = document.getElementsByTagName('footer')[0];
 const subtitle = document.getElementById('subtitle');
 const subtitleText = document.getElementById('subtitle-text');
 const snsLinks = Array.from(footer.getElementsByTagName('li'));
+const previous = document.getElementById('previous');
+const previousSubtitle = document.getElementById('previous-subtitle');
+const next = document.getElementById('next');
+const nextSubtitle = document.getElementById('next-subtitle');
 
 // Resize window
 function resizeWindow() {
@@ -42,15 +46,27 @@ function scrollEnd(scrollEvent) {
   return sectionRect.y == mainRect.y;
  })[0];
  const h2 = section.getElementsByTagName('h2')[0];
- console.log(h2.textContent);
- subtitleText.innerText = h2.textContent;
+ subtitleText.textContent = h2.textContent;
+ const previousSection = section.previousElementSibling;
+ if(previousSection) {
+  previous.style.display = 'flex';
+  previousSubtitle.textContent = previousSection.getElementsByTagName('h2')[0].textContent;
+ } else {
+  previous.style.display = 'none';
+ }
+ const nextSection = section.nextElementSibling;
+ if(nextSection) {
+  next.style.display = "flex";
+  nextSubtitle.textContent = nextSection.getElementsByTagName('h2')[0].textContent;
+ } else {
+  next.style.display = "none";
+ }
 }
 scrollEnd();
 main.addEventListener('scrollend', scrollEnd);
 
 // SNS links
 const footerHeight = footer.clientHeight;
-const next = document.getElementById('next');
 snsLinks.forEach(function(snsLink) {
  snsLink.moving = false;
  snsLink.riding = false;
