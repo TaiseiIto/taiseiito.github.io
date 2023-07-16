@@ -90,12 +90,10 @@ body {
   }
  }
  nav {
-  background: black;
-  min-height: 1rem;
+  background: #80ffff;
   position: absolute;
   right: 0;
   top: var(--header-height);
-  min-width: 1rem;
   z-index: 1;
  }
  main {
