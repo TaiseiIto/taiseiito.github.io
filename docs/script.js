@@ -61,22 +61,26 @@ function menuFocus() {
  }
 }
 menu.addEventListener('mouseenter', function() {
- menu.riding = true;
- menuFocus();
+ if(!menu.riding) {
+  menu.riding = true;
+  menuFocus();
+ }
 });
-menu.addEventListener('mouseleave', function(event) {
+header.addEventListener('mouseleave', function(event) {
  const navigationRect = navigation.getBoundingClientRect();
  const mouseX = event.x;
  const mouseY = event.y;
  const mouseInNavigation = navigationRect.left <= mouseX && mouseX <= navigationRect.right && navigationRect.top <= mouseY && mouseY <= navigationRect.bottom;
- if(!mouseInNavigation) {
+ if(menu.riding && !mouseInNavigation) {
   menu.riding = false;
   menuFocus();
  }
 });
 navigation.addEventListener('mouseleave', function() {
- menu.riding = false;
- menuFocus();
+ if(menu.riding) {
+  menu.riding = false;
+  menuFocus();
+ }
 });
 
 // Switch between light mode and dark mode
