@@ -1,6 +1,7 @@
 // Adjust page design
 const main = document.getElementsByTagName('main')[0];
 const header = document.getElementsByTagName('header')[0];
+const menu = document.getElementById('menu');
 const footer = document.getElementsByTagName('footer')[0];
 const sectionTitle = document.getElementById('section-title');
 const sectionTitleText = document.getElementById('section-title-text');
@@ -27,6 +28,18 @@ function resizeWindow() {
 }
 window.addEventListener('resize', resizeWindow);
 resizeWindow();
+
+// Menu
+menu.addEventListener('mouseover', function(event) {
+ if(!menu.contains(event.relatedTarget)) {
+  console.log('mouseover');
+ }
+});
+menu.addEventListener('mouseleave', function(event) {
+ if(!menu.contains(event.ralatedTarget)) {
+  console.log('mouseleave');
+ }
+});
 
 // Switch between light mode and dark mode
 const modeObserver = document.getElementById('mode-observer');
