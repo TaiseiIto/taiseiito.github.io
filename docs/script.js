@@ -6,11 +6,11 @@ const sectionTitle = document.getElementById('section-title');
 const sectionTitleText = document.getElementById('section-title-text');
 const snsLinks = Array.from(footer.getElementsByTagName('li'));
 const previous = document.getElementById('previous');
-const previousLink = document.getElementById('previous-link');
 const previousSectionTitle = document.getElementById('previous-section-title');
+const upArrow = document.getElementById('up-arrow');
 const next = document.getElementById('next');
-const nextLink = document.getElementById('next-link');
 const nextSectionTitle = document.getElementById('next-section-title');
+const downArrow = document.getElementById('down-arrow');
 const sections = Array.from(document.getElementsByTagName('section'));
 sections.forEach(function(section, index) {
  section.id = `section${index}`;
@@ -44,6 +44,8 @@ const modeObserverObserver = new IntersectionObserver(function() {
 modeObserverObserver.observe(modeObserver);
 
 // Scroll
+let previousSection;
+let nextSection;
 function scrollEnd(scrollEvent) {
  const mainRect = main.getBoundingClientRect();
  const section = Array.from(main.getElementsByTagName('section')).filter(function(section) {
@@ -52,25 +54,37 @@ function scrollEnd(scrollEvent) {
  })[0];
  const h2 = section.getElementsByTagName('h2')[0];
  sectionTitleText.textContent = h2.textContent;
- const previousSection = section.previousElementSibling;
+ previousSection = section.previousElementSibling;
  if(previousSection) {
   previous.style.display = 'flex';
   previousSectionTitle.textContent = previousSection.getElementsByTagName('h2')[0].textContent;
-  previousLink.setAttribute('href', `#${previousSection.id}`);
  } else {
   previous.style.display = 'none';
  }
- const nextSection = section.nextElementSibling;
+ nextSection = section.nextElementSibling;
  if(nextSection) {
   next.style.display = "flex";
   nextSectionTitle.textContent = nextSection.getElementsByTagName('h2')[0].textContent;
-  nextLink.setAttribute('href', `#${nextSection.id}`);
  } else {
   next.style.display = "none";
  }
 }
 main.addEventListener('scrollend', scrollEnd);
 scrollEnd();
+
+// Previous link
+function moveToPreviousSection() {
+ previousSection.scrollIntoView({behavior : 'smooth'});
+}
+previousSectionTitle.addEventListener('click', moveToPreviousSection);
+upArrow.addEventListener('click', moveToPreviousSection);
+
+// Next link
+function moveToNextSection() {
+ nextSection.scrollIntoView({behavior : 'smooth'});
+}
+nextSectionTitle.addEventListener('click', moveToNextSection);
+downArrow.addEventListener('click', moveToNextSection);
 
 // SNS links
 const footerHeight = footer.clientHeight;

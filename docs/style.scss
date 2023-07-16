@@ -122,10 +122,8 @@ body {
   position: fixed;
   width: 100%;
   z-index: 1;
-  a {
-   align-items: center;
-   display: flex;
-   flex-direction: column;
+  * {
+   cursor: pointer;
    pointer-events: auto;
   }
  }
