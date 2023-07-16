@@ -96,16 +96,21 @@ body footer address ul li img {
 }
 body nav {
   background: #e0ffff;
+  overflow: hidden;
   position: absolute;
   right: 0;
   top: var(--header-height);
+  width: 0;
   z-index: 1;
 }
 body nav ul {
   list-style: none;
+  width: 15rem;
 }
 body nav ul li {
+  cursor: pointer;
   margin: 1rem;
+  text-align: center;
   border-bottom: 1px solid;
 }
 body main {

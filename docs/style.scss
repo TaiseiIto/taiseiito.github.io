@@ -91,14 +91,19 @@ body {
  }
  nav {
   background: #e0ffff;
+  overflow: hidden;
   position: absolute;
   right: 0;
   top: var(--header-height);
+  width: 0;
   z-index: 1;
   ul {
    list-style: none;
+   width: 15rem;
    li {
+    cursor: pointer;
     margin: 1rem;
+    text-align: center;
     border: {
      bottom: 1px solid;
     }

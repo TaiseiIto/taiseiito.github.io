@@ -40,10 +40,22 @@ sections.forEach(function(section) {
  navigationList.appendChild(navigationItem);
 });
 menu.addEventListener('mouseenter', function(event) {
- console.log('mouseenter');
+ navigation.animate({
+  width: ['0', '15rem'],
+ }, {
+  duration: 300,
+  easing: 'ease-in-out',
+  fill: 'forwards',
+ });
 });
 menu.addEventListener('mouseleave', function(event) {
- console.log('mouseleave');
+ navigation.animate({
+  width: ['15rem', '0'],
+ }, {
+  duration: 300,
+  easing: 'ease-in-out',
+  fill: 'forwards',
+ });
 });
 
 // Switch between light mode and dark mode
