@@ -101,7 +101,6 @@ body {
   width: 100%;
   z-index: 1;
   #section-title-text {
-   pointer-events: auto;
    padding: {
     left: 1rem;
    }
@@ -110,7 +109,6 @@ body {
    background: linear-gradient(to right, black 0%, transparent calc(100% / 3), transparent 100%);
    bottom: 0;
    height: 5px;
-   pointer-events: auto;
    position: absolute;
    width: 100%;
   }
@@ -128,6 +126,7 @@ body {
    align-items: center;
    display: flex;
    flex-direction: column;
+   pointer-events: auto;
   }
  }
  #previous {

@@ -105,14 +105,12 @@ body #section-title {
   z-index: 1;
 }
 body #section-title #section-title-text {
-  pointer-events: auto;
   padding-left: 1rem;
 }
 body #section-title #section-title-underline {
   background: linear-gradient(to right, black 0%, transparent calc(100% / 3), transparent 100%);
   bottom: 0;
   height: 5px;
-  pointer-events: auto;
   position: absolute;
   width: 100%;
 }
@@ -130,6 +128,7 @@ body #previous a, body #next a {
   align-items: center;
   display: flex;
   flex-direction: column;
+  pointer-events: auto;
 }
 body #previous {
   top: var(--header-height);
