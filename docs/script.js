@@ -30,15 +30,11 @@ window.addEventListener('resize', resizeWindow);
 resizeWindow();
 
 // Menu
-menu.addEventListener('mouseover', function(event) {
- if(!menu.contains(event.relatedTarget)) {
-  console.log('mouseover');
- }
+menu.addEventListener('mouseenter', function(event) {
+ console.log('mouseenter');
 });
 menu.addEventListener('mouseleave', function(event) {
- if(!menu.contains(event.ralatedTarget)) {
-  console.log('mouseleave');
- }
+ console.log('mouseleave');
 });
 
 // Switch between light mode and dark mode
