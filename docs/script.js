@@ -2,6 +2,7 @@
 const main = document.getElementsByTagName('main')[0];
 const header = document.getElementsByTagName('header')[0];
 const menu = document.getElementById('menu');
+const navigation = document.getElementsByTagName('nav')[0];
 const footer = document.getElementsByTagName('footer')[0];
 const sectionTitle = document.getElementById('section-title');
 const sectionTitleText = document.getElementById('section-title-text');
@@ -22,6 +23,7 @@ function resizeWindow() {
  header.style.width = main.clientWidth;
  footer.style.width = main.clientWidth;
  sectionTitle.style.width = main.clientWidth;
+ navigation.style.right = window.innerWidth - main.clientWidth;
  snsLinks.forEach(function(snsLink) {
   snsLink.style.width = (footer.clientWidth / snsLinks.length) + 'px';
  });

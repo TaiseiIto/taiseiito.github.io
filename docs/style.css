@@ -72,6 +72,7 @@ body header #menu div {
 body footer {
   bottom: 0;
   height: var(--footer-height);
+  position: absolute;
 }
 body footer address {
   font-style: normal;
@@ -92,6 +93,15 @@ body footer address ul li {
 }
 body footer address ul li img {
   height: 80%;
+}
+body nav {
+  background: black;
+  min-height: 1rem;
+  position: absolute;
+  right: 0;
+  top: var(--header-height);
+  min-width: 1rem;
+  z-index: 1;
 }
 body main {
   background: white;
