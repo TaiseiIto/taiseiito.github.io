@@ -90,11 +90,20 @@ body {
   }
  }
  nav {
-  background: #80ffff;
+  background: #e0ffff;
   position: absolute;
   right: 0;
   top: var(--header-height);
   z-index: 1;
+  ul {
+   list-style: none;
+   li {
+    margin: 1rem;
+    border: {
+     bottom: 1px solid;
+    }
+   }
+  }
  }
  main {
   background: white;
