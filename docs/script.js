@@ -39,23 +39,34 @@ sections.forEach(function(section) {
  navigationItem.textContent = sectionTitle.textContent;
  navigationList.appendChild(navigationItem);
 });
+menu.moving = false;
+menu.riding = false;
+function menuFocus() {
+ if(!menu.moving) {
+  menu.moving = true;
+  menu.lastRiding = menu.riding;
+  const menuAnimation = navigation.animate({
+   width: menu.riding ? ['0rem', '15rem'] : ['15rem', '0rem'],
+  }, {
+   duration: 300,
+   easing: 'ease-in-out',
+   fill: 'forwards',
+  });
+  menuAnimation.oncancel = menuAnimation.onfinish = function() {
+   menu.moving = false;
+   if(menu.riding != menu.lastRiding) {
+     menuFocus();
+   }
+  }
+ }
+}
 menu.addEventListener('mouseenter', function(event) {
- navigation.animate({
-  width: ['0', '15rem'],
- }, {
-  duration: 300,
-  easing: 'ease-in-out',
-  fill: 'forwards',
- });
+ menu.riding = true;
+ menuFocus();
 });
 menu.addEventListener('mouseleave', function(event) {
- navigation.animate({
-  width: ['15rem', '0'],
- }, {
-  duration: 300,
-  easing: 'ease-in-out',
-  fill: 'forwards',
- });
+ menu.riding = false;
+ menuFocus();
 });
 
 // Switch between light mode and dark mode
