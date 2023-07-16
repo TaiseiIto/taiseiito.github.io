@@ -33,10 +33,17 @@ window.addEventListener('resize', resizeWindow);
 resizeWindow();
 
 // Menu
+let sectionMove = false;
 sections.forEach(function(section) {
  const sectionTitle = section.getElementsByTagName('h2')[0];
  const navigationItem = document.createElement('li');
  navigationItem.textContent = sectionTitle.textContent;
+ navigationItem.addEventListener('click', function() {
+  if(!sectionMove) {
+   sectionMove = true;
+   section.scrollIntoView({behavior : 'smooth'});
+  }
+ });
  navigationList.appendChild(navigationItem);
 });
 menu.moving = false;
@@ -123,20 +130,27 @@ function scrollEnd(scrollEvent) {
  } else {
   next.style.display = "none";
  }
+ sectionMove = false;
 }
 main.addEventListener('scrollend', scrollEnd);
 scrollEnd();
 
 // Previous link
 function moveToPreviousSection() {
- previousSection.scrollIntoView({behavior : 'smooth'});
+ if(!sectionMove) {
+  sectionMove = true;
+  previousSection.scrollIntoView({behavior : 'smooth'});
+ }
 }
 previousSectionTitle.addEventListener('click', moveToPreviousSection);
 upArrow.addEventListener('click', moveToPreviousSection);
 
 // Next link
 function moveToNextSection() {
- nextSection.scrollIntoView({behavior : 'smooth'});
+ if(!sectionMove) {
+  sectionMove = true;
+  nextSection.scrollIntoView({behavior : 'smooth'});
+ }
 }
 nextSectionTitle.addEventListener('click', moveToNextSection);
 downArrow.addEventListener('click', moveToNextSection);
