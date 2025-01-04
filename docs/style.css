@@ -181,13 +181,4 @@ body #down-arrow {
   clip-path: polygon(50% 100%, 0% 0%, 100% 0%);
 }
 
-#mode-observer {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 0;
-  width: 0;
-  display: none;
-}
-
 /*# sourceMappingURL=style.css.map */
