@@ -6,10 +6,10 @@
 body {
   --header-height: 3rem;
   --footer-height: 3rem;
-  --background: white;
-  --color: black;
-  background: var(--background);
-  color: var(--color);
+  --backgroundColor: white;
+  --foregroundColor: black;
+  background: var(--backgroundColor);
+  color: var(--foregroundColor);
 }
 body a {
   color: blue;
@@ -106,7 +106,7 @@ body nav ul li {
 }
 body main {
   align-items: center;
-  background: var(--background);
+  background: var(--backgroundColor);
   display: flex;
   flex-direction: column;
   height: calc(100vh - var(--header-height) - var(--footer-height));
@@ -122,8 +122,8 @@ body main {
 }
 body main section {
   --margin: 2rem;
-  background: linear-gradient(to right, var(--color) 0%, transparent calc(100% / 3), transparent 100%);
-  border-left: 1px solid var(--color);
+  background: linear-gradient(to right, var(--foregroundColor) 0%, transparent calc(100% / 3), transparent 100%);
+  border-left: 1px solid var(--foregroundColor);
   margin-bottom: var(--margin);
   margin-left: var(--margin);
   margin-top: var(--margin);
@@ -132,7 +132,7 @@ body main section {
   width: min(100vw, 70rem);
 }
 body main section > * {
-  background: var(--background);
+  background: var(--backgroundColor);
   padding: 1rem;
 }
 body main section h2 {
@@ -147,7 +147,7 @@ body main section ul li::before {
   display: inline-block;
   content: '';
   border-radius: 50%;
-  background: var(--color);
+  background: var(--foregroundColor);
   width: var(--bulletSize);
   height: var(--bulletSize);
 }

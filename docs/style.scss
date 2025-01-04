@@ -6,10 +6,10 @@
 body {
  --header-height: 3rem;
  --footer-height: 3rem;
- --background: white;
- --color: black;
- background: var(--background);
- color: var(--color);
+ --backgroundColor: white;
+ --foregroundColor: black;
+ background: var(--backgroundColor);
+ color: var(--foregroundColor);
  a {
   color: blue;
   text-decoration: none;
@@ -107,7 +107,7 @@ body {
  }
  main {
   align-items: center;
-  background: var(--background);
+  background: var(--backgroundColor);
   display: flex;
   flex-direction: column;
   height: calc(100vh - var(--header-height) - var(--footer-height));
@@ -122,8 +122,8 @@ body {
   z-index: 0;
   section {
    --margin: 2rem;
-   background: linear-gradient(to right, var(--color) 0%, transparent calc(100% / 3), transparent 100%);
-   border-left: 1px solid var(--color);
+   background: linear-gradient(to right, var(--foregroundColor) 0%, transparent calc(100% / 3), transparent 100%);
+   border-left: 1px solid var(--foregroundColor);
    margin-bottom: var(--margin);
    margin-left: var(--margin);
    margin-top: var(--margin);
@@ -131,7 +131,7 @@ body {
    scroll-margin-top: calc(var(--margin) + var(--header-height));
    width: min(100vw, 70rem);
    > * {
-    background: var(--background);
+    background: var(--backgroundColor);
     padding: 1rem;
    }
    h2 {
@@ -146,7 +146,7 @@ body {
       display: inline-block;
       content: '';
       border-radius: 50%;
-      background: var(--color);
+      background: var(--foregroundColor);
       width: var(--bulletSize);
       height: var(--bulletSize);
      }
