@@ -8,11 +8,7 @@ const footer = document.getElementsByTagName('footer')[0];
 const sectionTitle = document.getElementById('section-title');
 const sectionTitleText = document.getElementById('section-title-text');
 const snsLinks = Array.from(footer.getElementsByTagName('li'));
-const previous = document.getElementById('previous');
-const previousSectionTitle = document.getElementById('previous-section-title');
 const upArrow = document.getElementById('up-arrow');
-const next = document.getElementById('next');
-const nextSectionTitle = document.getElementById('next-section-title');
 const downArrow = document.getElementById('down-arrow');
 const sections = Array.from(document.getElementsByTagName('section'));
 sections.forEach(function(section, index) {
@@ -90,36 +86,6 @@ navigation.addEventListener('mouseleave', function() {
  }
 });
 
-// Scroll
-let previousSection;
-let nextSection;
-function scrollEnd(scrollEvent) {
- const mainRect = main.getBoundingClientRect();
- const section = Array.from(main.getElementsByTagName('section')).filter(function(section) {
-  const sectionRect = section.getBoundingClientRect();
-  return sectionRect.y == mainRect.y;
- })[0];
- const h2 = section.getElementsByTagName('h2')[0];
- sectionTitleText.textContent = h2.textContent;
- previousSection = section.previousElementSibling;
- if(previousSection) {
-  previous.style.display = 'flex';
-  previousSectionTitle.textContent = previousSection.getElementsByTagName('h2')[0].textContent;
- } else {
-  previous.style.display = 'none';
- }
- nextSection = section.nextElementSibling;
- if(nextSection) {
-  next.style.display = "flex";
-  nextSectionTitle.textContent = nextSection.getElementsByTagName('h2')[0].textContent;
- } else {
-  next.style.display = "none";
- }
- sectionMove = false;
-}
-main.addEventListener('scrollend', scrollEnd);
-scrollEnd();
-
 // SNS links
 const footerHeight = footer.clientHeight;
 snsLinks.forEach(function(snsLink) {
@@ -141,9 +107,6 @@ snsLinks.forEach(function(snsLink) {
    footerRiding = snsLinks.map((snsLink) => snsLink.riding).reduce((footerRiding, snsLinkRiding) => footerRiding || snsLinkRiding, false);
    footer.animate({
     height: footerRiding ? [footer.clientHeight + 'px', 2 * footerHeight + 'px'] : [footer.clientHeight + 'px', footerHeight + 'px'],
-   }, animationProperty);
-   next.animate({
-    bottom: footerRiding ? [footer.clientHeight + 'px', 2 * footerHeight + 'px'] : [footer.clientHeight + 'px', footerHeight + 'px'],
    }, animationProperty);
    const animation = snsLink.animate(animationBody, animationProperty);
    animation.oncancel = animation.onfinish = function() {
