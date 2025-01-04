@@ -134,6 +134,17 @@ body {
    }
    ul {
     list-style: none;
+    li {
+     &::before {
+      --bulletSize: 10px;
+      display: inline-block;
+      content: '';
+      border-radius: 50%;
+      background: var(--color);
+      width: var(--bulletSize);
+      height: var(--bulletSize);
+     }
+    }
    }
   }
  }

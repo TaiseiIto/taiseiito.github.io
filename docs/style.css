@@ -136,5 +136,14 @@ body main section h2 {
 body main section ul {
   list-style: none;
 }
+body main section ul li::before {
+  --bulletSize: 10px;
+  display: inline-block;
+  content: '';
+  border-radius: 50%;
+  background: var(--color);
+  width: var(--bulletSize);
+  height: var(--bulletSize);
+}
 
 /*# sourceMappingURL=style.css.map */
