@@ -6,7 +6,7 @@
 body {
  --header-height: 3rem;
  --footer-height: 3rem;
- --section-title-height: 3rem;
+ --section-margin: 3rem;
  --background: white;
  --color: black;
  --shadow-color: rgba(0, 0, 0, 0.25);
@@ -106,14 +106,33 @@ body {
   height: calc(100vh - var(--header-height) - var(--footer-height));
   left: 0;
   overflow: auto;
-  padding-top: var(--header-height);
   padding-bottom: var(--footer-height);
+  padding-top: var(--header-height);
   position: absolute;
   position: fixed;
   top: 0;
   width: 100vw;
   z-index: 0;
   section {
+   margin-bottom: var(--section-margin);
+   margin-top: var(--section-margin);
+   margin-left: var(--section-margin);
+   h2 {
+    --border-width: 5px;
+    display: flex;
+    flex-direction: column;
+    font-size: x-large;
+    position: relative;
+    &::after {
+     background: linear-gradient(to right, black 0%, transparent calc(100% / 3), transparent 100%);
+     bottom: 0;
+     content: '';
+     height: var(--border-width);
+     left: 0;
+     width: 100%;
+     position: absolute;
+    }
+   }
   }
  }
 }
