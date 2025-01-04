@@ -5,8 +5,6 @@ const menu = document.getElementById('menu');
 const navigation = document.getElementsByTagName('nav')[0];
 const navigationList = document.getElementsByTagName('ul')[0];
 const footer = document.getElementsByTagName('footer')[0];
-const sectionTitle = document.getElementById('section-title');
-const sectionTitleText = document.getElementById('section-title-text');
 const snsLinks = Array.from(footer.getElementsByTagName('li'));
 const upArrow = document.getElementById('up-arrow');
 const downArrow = document.getElementById('down-arrow');
@@ -19,7 +17,6 @@ sections.forEach(function(section, index) {
 function resizeWindow() {
  header.style.width = main.clientWidth;
  footer.style.width = main.clientWidth;
- sectionTitle.style.width = main.clientWidth;
  navigation.style.right = window.innerWidth - main.clientWidth;
  snsLinks.forEach(function(snsLink) {
   snsLink.style.width = (footer.clientWidth / snsLinks.length) + 'px';

@@ -111,40 +111,5 @@ body main {
   width: 100vw;
   z-index: 0;
 }
-body main section {
-  height: calc(100% - var(--header-height) - var(--footer-height) - var(--section-title-height));
-  padding-top: calc(var(--header-height) + var(--section-title-height));
-  padding-bottom: var(--footer-height);
-}
-body main section h2 {
-  display: none;
-}
-body main section ul {
-  margin: 1rem;
-}
-body #section-title {
-  align-items: center;
-  background: linear-gradient(to right, white 0%, white calc(100%/3), transparent calc(100% * 2 / 3), transparent 100%);
-  display: flex;
-  font-size: x-large;
-  font-weight: bold;
-  height: var(--section-title-height);
-  left: 0;
-  pointer-events: none;
-  position: relative;
-  top: 0;
-  width: 100%;
-  z-index: 1;
-}
-body #section-title #section-title-text {
-  padding-left: 1rem;
-}
-body #section-title #section-title-underline {
-  background: linear-gradient(to right, black 0%, transparent calc(100% / 3), transparent 100%);
-  bottom: 0;
-  height: 5px;
-  position: absolute;
-  width: 100%;
-}
 
 /*# sourceMappingURL=style.css.map */
