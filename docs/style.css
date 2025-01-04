@@ -12,8 +12,14 @@ body {
   color: var(--color);
 }
 body a {
-  color: inherit;
+  color: blue;
   text-decoration: none;
+}
+body a:hover {
+  font-weight: bold;
+}
+body a:visited {
+  color: red;
 }
 body header, body footer {
   background: #e0ffff;
