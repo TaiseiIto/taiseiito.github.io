@@ -29,16 +29,12 @@ window.addEventListener('resize', resizeWindow);
 resizeWindow();
 
 // Menu
-let sectionMove = false;
 sections.forEach(function(section) {
  const sectionTitle = section.getElementsByTagName('h2')[0];
  const navigationItem = document.createElement('li');
  navigationItem.textContent = sectionTitle.textContent;
  navigationItem.addEventListener('click', function() {
-  if(!sectionMove) {
-   sectionMove = true;
-   section.scrollIntoView({behavior : 'smooth'});
-  }
+  section.scrollIntoView({behavior : 'smooth'});
  });
  navigationList.appendChild(navigationItem);
 });
