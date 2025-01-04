@@ -81,6 +81,7 @@ navigation.addEventListener('mouseleave', function() {
 
 // SNS links
 const footerHeight = footer.clientHeight;
+const magnificationRate = 1.5;
 snsLinks.forEach(function(snsLink) {
  snsLink.moving = false;
  snsLink.riding = false;
@@ -90,7 +91,7 @@ snsLinks.forEach(function(snsLink) {
    snsLink.moving = true;
    snsLink.lastRiding = snsLink.riding;
    const animationBody = {
-    height: snsLink.riding ? [footerHeight + 'px', 2 * footerHeight + 'px'] : [2 * footerHeight + 'px', footerHeight + 'px'],
+    height: snsLink.riding ? [footerHeight + 'px', magnificationRate * footerHeight + 'px'] : [magnificationRate * footerHeight + 'px', footerHeight + 'px'],
    };
    const animationProperty = {
     duration: 300,
@@ -99,7 +100,7 @@ snsLinks.forEach(function(snsLink) {
    };
    footerRiding = snsLinks.map((snsLink) => snsLink.riding).reduce((footerRiding, snsLinkRiding) => footerRiding || snsLinkRiding, false);
    footer.animate({
-    height: footerRiding ? [footer.clientHeight + 'px', 2 * footerHeight + 'px'] : [footer.clientHeight + 'px', footerHeight + 'px'],
+    height: footerRiding ? [footer.clientHeight + 'px', magnificationRate * footerHeight + 'px'] : [footer.clientHeight + 'px', footerHeight + 'px'],
    }, animationProperty);
    const animation = snsLink.animate(animationBody, animationProperty);
    animation.oncancel = animation.onfinish = function() {
