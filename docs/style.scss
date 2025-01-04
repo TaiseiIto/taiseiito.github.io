@@ -103,14 +103,18 @@ body {
  }
  main {
   background: white;
-  height: 100vh;
+  height: calc(100vh - var(--header-height) - var(--footer-height));
   left: 0;
   overflow: auto;
+  padding-top: var(--header-height);
+  padding-bottom: var(--footer-height);
   position: absolute;
   position: fixed;
   top: 0;
   width: 100vw;
   z-index: 0;
+  section {
+  }
  }
 }
 
