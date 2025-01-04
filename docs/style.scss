@@ -7,20 +7,11 @@ body {
  --header-height: 3rem;
  --footer-height: 3rem;
  --section-title-height: 3rem;
- @media(prefers-color-scheme: light) {
-  --background: white;
-  --color: black;
-  --shadow-color: rgba(0, 0, 0, 0.25);
-  background: white;
-  color: black;
- }
- @media(prefers-color-scheme: dark) {
-  --background: white;
-  --color: black;
-  --shadow-color: rgba(255, 255, 255, 0.25);
-  background: black;
-  color: white;
- }
+ --background: white;
+ --color: black;
+ --shadow-color: rgba(0, 0, 0, 0.25);
+ background: white;
+ color: black;
  a {
   color: inherit;
   text-decoration: none;
@@ -201,11 +192,6 @@ body {
  left: 0;
  height: 0;
  width: 0;
- @media(prefers-color-scheme: light) {
-  display: none;
- }
- @media(prefers-color-scheme: dark) {
-  display: block;
- }
+ display: none;
 }
 
