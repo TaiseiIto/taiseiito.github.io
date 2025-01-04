@@ -99,7 +99,10 @@ body nav ul li {
   border-bottom: 1px solid;
 }
 body main {
+  align-items: center;
   background: var(--background);
+  display: flex;
+  flex-direction: column;
   height: calc(100vh - var(--header-height) - var(--footer-height));
   left: 0;
   overflow: auto;
@@ -116,9 +119,10 @@ body main section {
   background: linear-gradient(to right, var(--color) 0%, transparent calc(100% / 3), transparent 100%);
   border-left: 1px solid var(--color);
   margin-bottom: var(--margin);
-  margin-top: var(--margin);
   margin-left: var(--margin);
+  margin-top: var(--margin);
   padding-left: 2px;
+  width: 70rem;
 }
 body main section > * {
   background: var(--background);
