@@ -120,26 +120,6 @@ function scrollEnd(scrollEvent) {
 main.addEventListener('scrollend', scrollEnd);
 scrollEnd();
 
-// Previous link
-function moveToPreviousSection() {
- if(!sectionMove) {
-  sectionMove = true;
-  previousSection.scrollIntoView({behavior : 'smooth'});
- }
-}
-previousSectionTitle.addEventListener('click', moveToPreviousSection);
-upArrow.addEventListener('click', moveToPreviousSection);
-
-// Next link
-function moveToNextSection() {
- if(!sectionMove) {
-  sectionMove = true;
-  nextSection.scrollIntoView({behavior : 'smooth'});
- }
-}
-nextSectionTitle.addEventListener('click', moveToNextSection);
-downArrow.addEventListener('click', moveToNextSection);
-
 // SNS links
 const footerHeight = footer.clientHeight;
 snsLinks.forEach(function(snsLink) {
