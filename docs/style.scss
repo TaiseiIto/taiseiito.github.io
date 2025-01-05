@@ -141,21 +141,8 @@ body {
     margin-bottom: var(--title-line-width);
    }
    ul {
-    list-style: none;
-    li {
-     display: flex;
-     align-items: center;
-     &::before {
-      --bulletSize: 5px;
-      display: inline-block;
-      content: '';
-      border-radius: 50%;
-      background: var(--foregroundColor);
-      width: var(--bulletSize);
-      height: var(--bulletSize);
-      margin-right: 1rem;
-     }
-    }
+    --padding: 3rem;
+    padding-left: var(--padding);
    }
   }
  }
