@@ -42,7 +42,7 @@ function menuFocus() {
   menu.moving = true;
   menu.lastRiding = menu.riding;
   const menuAnimation = navigation.animate({
-   width: menu.riding ? ['0rem', '15rem'] : ['15rem', '0rem'],
+   width: menu.riding ? ['0rem', '20rem'] : ['20rem', '0rem'],
   }, {
    duration: 300,
    easing: 'ease-in-out',
