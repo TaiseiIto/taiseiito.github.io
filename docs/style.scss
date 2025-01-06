@@ -102,6 +102,12 @@ body {
     border: {
      bottom: 1px solid;
     }
+    &:hover {
+     font-weight: bold;
+     border: {
+      bottom: 2px solid;
+     }
+    }
    }
   }
  }

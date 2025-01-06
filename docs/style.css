@@ -104,6 +104,10 @@ body nav ul li {
   text-align: center;
   border-bottom: 1px solid;
 }
+body nav ul li:hover {
+  font-weight: bold;
+  border-bottom: 2px solid;
+}
 body main {
   align-items: center;
   background: var(--backgroundColor);
