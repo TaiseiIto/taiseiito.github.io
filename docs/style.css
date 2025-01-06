@@ -135,7 +135,7 @@ body main section {
   margin-top: var(--margin);
   padding-left: var(--left-line-width);
   scroll-margin-top: calc(var(--margin) + var(--header-height));
-  width: min(100vw, 70rem);
+  width: min(90vw, 70rem);
 }
 body main section > * {
   background: var(--backgroundColor);
@@ -150,7 +150,7 @@ body main section ul {
   padding-left: var(--padding);
 }
 body main section iframe {
-  width: 80%;
+  width: 90%;
   aspect-ratio: 16/9;
 }
 
