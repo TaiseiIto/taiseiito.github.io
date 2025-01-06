@@ -145,5 +145,9 @@ body main section ul {
   --padding: 3rem;
   padding-left: var(--padding);
 }
+body main section iframe {
+  width: 80%;
+  aspect-ratio: 16/9;
+}
 
 /*# sourceMappingURL=style.css.map */

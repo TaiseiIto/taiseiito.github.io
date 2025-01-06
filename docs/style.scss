@@ -144,6 +144,10 @@ body {
     --padding: 3rem;
     padding-left: var(--padding);
    }
+   iframe {
+    width: 80%;
+    aspect-ratio: 16/9;
+   }
   }
  }
 }
