@@ -162,6 +162,18 @@
   body header {
     text-align: center;
   }
+  body footer ul {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+  }
+  body footer ul li {
+    padding: 1rem;
+  }
+  body footer ul li img {
+    height: 4rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
