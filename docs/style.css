@@ -155,5 +155,13 @@
     aspect-ratio: 16/9;
   }
 }
+@media (max-width: 499px) {
+  body header, body footer {
+    background: #e0ffff;
+  }
+  body header {
+    text-align: center;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

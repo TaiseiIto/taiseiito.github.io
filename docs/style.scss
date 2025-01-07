@@ -161,6 +161,12 @@
 }
 @media (max-width: 499px) {
  body {
+  header, footer {
+   background: #e0ffff;
+  }
+  header {
+   text-align: center;
+  }
  }
 }
 
