@@ -3,134 +3,193 @@
  margin: 0;
  padding: 0;
 }
-body {
- --header-height: 3rem;
- --footer-height: 3rem;
- --backgroundColor: white;
- --foregroundColor: black;
- background: var(--backgroundColor);
- color: var(--foregroundColor);
- a {
-  color: blue;
-  text-decoration: none;
-  &:hover {
-   font-weight: bold;
+@media (min-width: 500px) {
+ body {
+  --header-height: 3rem;
+  --footer-height: 3rem;
+  --backgroundColor: white;
+  --foregroundColor: black;
+  background: var(--backgroundColor);
+  color: var(--foregroundColor);
+  a {
+   color: blue;
+   text-decoration: none;
+   &:hover {
+    font-weight: bold;
+   }
+   &:visited {
+    color: red;
+   }
   }
-  &:visited {
-   color: red;
-  }
- }
- header, footer {
-  background: #e0ffff;
-  left: 0;
-  position: fixed;
-  width: 100vw;
-  z-index: 1;
- }
- header {
-  height: var(--header-height);
-  position: relative;
-  text-align: center;
-  top: 0;
-  h1 {
-   height: 100%;
+  header, footer {
+   background: #e0ffff;
    left: 0;
-   position: absolute;
-   top: 0;
-   width: 100%;
-   z-index: 0;
+   position: fixed;
+   width: 100vw;
+   z-index: 1;
   }
-  #menu {
+  header {
    height: var(--header-height);
+   position: relative;
+   text-align: center;
+   top: 0;
+   h1 {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+   }
+   #menu {
+    height: var(--header-height);
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: var(--header-height);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    div {
+     height: calc(100% / 7);
+     width: calc(100% * 5/ 7);
+     background: #008080;
+     border-radius: calc(var(--header-height) / 14);
+    }
+   }
+  }
+  footer {
+   bottom: 0;
+   height: var(--footer-height);
+   position: absolute;
+   address{
+    font-style: normal;
+    height: 100%;
+    ul {
+     align-items: end;
+     display: flex;
+     height: 100%;
+     list-style: none;
+     li {
+      align-items: center;
+      display: flex;
+      height: var(--footer-height);
+      justify-content:center;
+      text-align: center;
+      img {
+       height: 80%;
+      }
+     }
+    }
+   }
+  }
+  nav {
+   background: #e0ffff;
+   overflow: hidden;
    position: absolute;
    right: 0;
-   top: 0;
-   width: var(--header-height);
+   top: var(--header-height);
+   width: 0;
    z-index: 1;
+   ul {
+    list-style: none;
+    width: 20rem;
+    li {
+     cursor: pointer;
+     margin: 1rem;
+     text-align: center;
+     border: {
+      bottom: 1px solid;
+     }
+     &:hover {
+      font-weight: bold;
+      border: {
+       bottom: 2px solid;
+      }
+     }
+    }
+   }
+  }
+  main {
+   align-items: center;
+   background: var(--backgroundColor);
    display: flex;
    flex-direction: column;
-   justify-content: space-evenly;
-   align-items: center;
-   div {
-    height: calc(100% / 7);
-    width: calc(100% * 5/ 7);
-    background: #008080;
-    border-radius: calc(var(--header-height) / 14);
+   height: calc(100vh - var(--header-height) - var(--footer-height));
+   left: 0;
+   overflow: auto;
+   padding-bottom: var(--footer-height);
+   padding-top: var(--header-height);
+   position: absolute;
+   position: fixed;
+   top: 0;
+   width: 100vw;
+   z-index: 0;
+   section {
+    --margin: 2rem;
+    --left-line-width: 1px;
+    --title-line-width: 2px;
+    background: linear-gradient(to right, var(--foregroundColor) 0%, transparent calc(100% / 3), transparent 100%);
+    border-left: 1px solid var(--foregroundColor);
+    margin-bottom: var(--margin);
+    margin-left: var(--margin);
+    margin-top: var(--margin);
+    padding-left: var(--left-line-width);
+    scroll-margin-top: calc(var(--margin) + var(--header-height));
+    width: min(90vw, 70rem);
+    > * {
+     background: var(--backgroundColor);
+     padding: 1rem;
+    }
+    h2 {
+     font-size: x-large;
+     margin-bottom: var(--title-line-width);
+    }
+    ul {
+     --padding: 3rem;
+     padding-left: var(--padding);
+    }
+    iframe {
+     width: 90%;
+     aspect-ratio: 16/9;
+    }
    }
   }
  }
- footer {
-  bottom: 0;
-  height: var(--footer-height);
-  position: absolute;
-  address{
-   font-style: normal;
-   height: 100%;
+}
+@media (max-width: 499px) {
+ body {
+  --header-height: 3rem;
+  --backgroundColor: white;
+  --foregroundColor: black;
+  header, footer {
+   background: #e0ffff;
+  }
+  header {
+   height: var(--header-height);
+   text-align: center;
+  }
+  footer {
    ul {
-    align-items: end;
+    align-items: center;
     display: flex;
-    height: 100%;
+    flex-direction: column;
     list-style: none;
     li {
-     align-items: center;
-     display: flex;
-     height: var(--footer-height);
-     justify-content:center;
-     text-align: center;
+     padding: 1rem;
      img {
-      height: 80%;
+      height: 4rem;
      }
     }
    }
   }
- }
- nav {
-  background: #e0ffff;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: var(--header-height);
-  width: 0;
-  z-index: 1;
-  ul {
-   list-style: none;
-   width: 20rem;
-   li {
-    cursor: pointer;
-    margin: 1rem;
-    text-align: center;
-    border: {
-     bottom: 1px solid;
-    }
-    &:hover {
-     font-weight: bold;
-     border: {
-      bottom: 2px solid;
-     }
-    }
-   }
-  }
- }
- main {
-  align-items: center;
-  background: var(--backgroundColor);
-  display: flex;
-  flex-direction: column;
-  height: calc(100vh - var(--header-height) - var(--footer-height));
-  left: 0;
-  overflow: auto;
-  padding-bottom: var(--footer-height);
-  padding-top: var(--header-height);
-  position: absolute;
-  position: fixed;
-  top: 0;
-  width: 100vw;
-  z-index: 0;
   section {
    --margin: 2rem;
    --left-line-width: 1px;
    --title-line-width: 2px;
-   background: linear-gradient(to right, var(--foregroundColor) 0%, transparent calc(100% / 3), transparent 100%);
+   background: linear-gradient(to right, var(--foregroundColor) 0%, transparent 100%);
    border-left: 1px solid var(--foregroundColor);
    margin-bottom: var(--margin);
    margin-left: var(--margin);
