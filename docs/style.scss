@@ -78,8 +78,11 @@
       height: var(--footer-height);
       justify-content:center;
       text-align: center;
-      img {
-       height: 80%;
+      a {
+       height: 100%;
+       img {
+        height: 80%;
+       }
       }
      }
     }
