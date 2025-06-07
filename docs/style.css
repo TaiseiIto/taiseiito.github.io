@@ -83,7 +83,10 @@
     justify-content: center;
     text-align: center;
   }
-  body footer address ul li img {
+  body footer address ul li a {
+    height: 100%;
+  }
+  body footer address ul li a img {
     height: 80%;
   }
   body nav {
