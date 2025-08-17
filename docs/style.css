@@ -84,6 +84,8 @@
     text-align: center;
   }
   body footer address ul li a {
+    align-items: center;
+    display: flex;
     height: 100%;
   }
   body footer address ul li a img {
